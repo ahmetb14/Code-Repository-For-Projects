@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataAccess": "1.0.0",
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Business.dll": {}
+        }
+      },
+      "DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Business/1.0.0": {
+      "type": "project",
+      "path": "../Business/Business.csproj",
+      "msbuildProject": "../Business/Business.csproj"
+    },
+    "DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Business >= 1.0.0",
+      "DataAccess >= 1.0.0",
+      "Entities >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ahmet\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
+      "projectName": "ConsoleUI",
+      "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
+      "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\ConsoleUI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Business\\Business.csproj"
+            },
+            "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj"
+            },
+            "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

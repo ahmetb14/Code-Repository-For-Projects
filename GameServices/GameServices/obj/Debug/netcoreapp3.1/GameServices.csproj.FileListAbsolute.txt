@@ -1,0 +1,13 @@
+C:\Users\ahmet\source\repos\GameServices\GameServices\bin\Debug\netcoreapp3.1\GameServices.exe
+C:\Users\ahmet\source\repos\GameServices\GameServices\bin\Debug\netcoreapp3.1\GameServices.deps.json
+C:\Users\ahmet\source\repos\GameServices\GameServices\bin\Debug\netcoreapp3.1\GameServices.runtimeconfig.json
+C:\Users\ahmet\source\repos\GameServices\GameServices\bin\Debug\netcoreapp3.1\GameServices.runtimeconfig.dev.json
+C:\Users\ahmet\source\repos\GameServices\GameServices\bin\Debug\netcoreapp3.1\GameServices.dll
+C:\Users\ahmet\source\repos\GameServices\GameServices\bin\Debug\netcoreapp3.1\GameServices.pdb
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.csprojAssemblyReference.cache
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.AssemblyInfoInputs.cache
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.AssemblyInfo.cs
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.dll
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.pdb
+C:\Users\ahmet\source\repos\GameServices\GameServices\obj\Debug\netcoreapp3.1\GameServices.genruntimeconfig.cache
