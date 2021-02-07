@@ -1,6 +1,6 @@
-﻿using Business.Abstract;
-using Business.Concrete;
-using DataAccess.Concrete;
+﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using System;
 
 namespace ConsoleUI
@@ -9,28 +9,54 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ICarService carService = new CarManager(new InMemoryCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+            ColorManager colorManager = new ColorManager(new EfColorDal());
 
-            foreach (var car in carService.GetCars())
+            Console.Write("-Hangi Marka Araba İstersiniz? ==> ");
+            byte brandId = Convert.ToByte(Console.ReadLine());
+
+            foreach (var car in carManager.GetCarsByBrandId(brandId))
             {
-                Console.WriteLine("-->Araç Bilgisi<--");
-                Console.WriteLine(car.Description);
-                Console.WriteLine("                    ");
-                Console.WriteLine("-->Araç Model Yılı<--");
-                Console.WriteLine(car.ModelYear);
-                Console.WriteLine("                    ");
-                Console.WriteLine("-->Araç Fiyatı<--");
-                Console.WriteLine(car.DailyPrice);
-                Console.WriteLine("                    ");
-                Console.WriteLine("-->Araç Marka Numarası<--");
-                Console.WriteLine(car.BrandId);
-                Console.WriteLine("                    ");
-                Console.WriteLine("-->Araç Kimlik Numarası<--");
-                Console.WriteLine(car.Id);
-                Console.WriteLine("                    ");
-                Console.WriteLine("-->Araç Renk Numarası<--");
-                Console.WriteLine(car.ColorId);
+                Console.WriteLine($"Arabanın Marka Adı = {brandManager.GetById(car.BrandId).BrandName}\n" +
+                $"Arabanın Model Yılı = {car.ModelYear}\n" +
+                $"Arabanın Renk Adı = {colorManager.GetById(car.ColorId).ColorName}\n" +
+                $"Araba Hakkında Açıklama = {car.Descriptions}\n" +
+                $"Arabanın Günlük Ücreti = {car.DailyPrice}\n");
             }
+
+            Console.WriteLine("-Hangi Renk Araba İstersiniz? ==> ");
+            byte colorId = Convert.ToByte(Console.ReadLine());
+
+            foreach (var car in carManager.GetCarsByColorId(colorId))
+            {
+                Console.WriteLine($"Arabanın Renk Adı = {colorManager.GetById(car.ColorId).ColorName}\n" +
+                $"Arabanın Marka Adı = {brandManager.GetById(car.ColorId).BrandName}\n" +
+                $"Arabanın Model Yılı = {car.ModelYear}\n" +
+                $"Araba Hakkında Açıklama = {car.Descriptions}\n" +
+                $"Arabanın Günlük Ücreti = {car.DailyPrice}\n");
+
+            }
+
+            Brand brand1 = new Brand()
+            {
+                BrandName = "F"
+            };
+
+            brandManager.Add(brand1);
+            Console.WriteLine();
+
+            Car car1 = new Car()
+            {
+                BrandId = 7,
+                ColorId = 7,
+                DailyPrice = -120,
+                ModelYear = "2010",
+                Descriptions = "Fiat Palio 1.6 Benzin & LPG Active Sole 75 HP"
+            };
+
+            carManager.Add(car1);
+
         }
     }
 }
