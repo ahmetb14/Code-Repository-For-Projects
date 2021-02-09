@@ -26,6 +26,8 @@ namespace ConsoleUI
                 Console.WriteLine("**************************************************************************************");
             }
 
+            Console.ReadLine();
+
         }
 
         private static void Stage1()
