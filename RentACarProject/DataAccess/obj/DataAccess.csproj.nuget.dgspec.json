@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj"
+              "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj": {
+    "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4985,11 +4985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5006,14 +5006,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Business\\Business.csproj"
+            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Business\\Business.csproj"
             },
-            "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\source\\repos\\ReCapProject\\Entities\\Entities.csproj"
+            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj"
             }
           }
         }
