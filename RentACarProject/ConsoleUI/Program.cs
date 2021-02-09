@@ -15,8 +15,11 @@ namespace ConsoleUI
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             ColorManager colorManager = new ColorManager(new EfColorDal());
 
+            Console.WriteLine("**************************************************************************************");
+
             foreach (var car in carManager.GetCarDetails())
             {
+                Console.WriteLine("=> Araç Bilgileri <=");
                 Console.WriteLine("**************************************************************************************");
                 Console.WriteLine("-> Arabanın Renk Adı: " + car.ColorName + "\n-> Arabanın Marka Adı: " + car.BrandName +
                   "\n-> Araba Hakkında Açıklama: " + car.CarName + "\n-> Arabanın Günlük Ücreti: " + car.DailyPrice);
