@@ -9,9 +9,9 @@ namespace DataAccess.Concrete.EntityFramework
     public class RentACarDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //base.OnConfiguring(optionsBuilder);
+        {          
             optionsBuilder.UseSqlServer(@"Server= (localdb)\MSSQLLocalDB; Database=RentACar; Trusted_Connection = true;");
+            //base.OnConfiguring(optionsBuilder);
         }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }

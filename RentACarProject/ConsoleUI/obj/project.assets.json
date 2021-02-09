@@ -1267,6 +1267,19 @@
           "bin/placeholder/Business.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1284,6 +1297,9 @@
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -4961,6 +4977,11 @@
       "path": "../Business/Business.csproj",
       "msbuildProject": "../Business/Business.csproj"
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -4985,11 +5006,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5006,14 +5027,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Business\\Business.csproj"
+            "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj"
             },
-            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
             }
           }
         }

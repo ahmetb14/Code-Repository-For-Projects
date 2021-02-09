@@ -1692,9 +1692,25 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -6174,6 +6190,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -6193,11 +6214,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6214,8 +6235,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\ahmet\\Documents\\GitHub\\Software_Developer_Training_Camp_By_Engin_Demirog\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
             }
           }
         }

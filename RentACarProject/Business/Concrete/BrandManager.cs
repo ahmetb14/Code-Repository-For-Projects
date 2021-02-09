@@ -25,7 +25,7 @@ namespace Business.Concrete
             }
             else
             {
-                Console.WriteLine("Araba'nın İsmi En Az 2 Karakter Olması Gerekmekte!");
+                Console.WriteLine("!!}Araba'nın İsmi En Az 2 Karakter Olması Gerekmekte!");
             }
         }
 
