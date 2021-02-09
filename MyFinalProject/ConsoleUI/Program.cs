@@ -14,6 +14,9 @@ namespace ConsoleUI
             ProductTest();
             //IoC
             //CategoryTest();
+
+            Console.ReadLine();
+
         }
 
         private static void CategoryTest()
