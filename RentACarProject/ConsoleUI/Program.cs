@@ -22,7 +22,7 @@ namespace ConsoleUI
                 Console.WriteLine("=> Araç Bilgileri <=");
                 Console.WriteLine("**************************************************************************************");
                 Console.WriteLine("-> Arabanın Renk Adı: " + car.ColorName + "\n-> Arabanın Marka Adı: " + car.BrandName +
-                  "\n-> Araba Hakkında Açıklama: " + car.CarName + "\n-> Arabanın Günlük Ücreti: " + car.DailyPrice);
+                  "\n-> Araba Hakkında Açıklama: " + car.Descriptions + "\n-> Arabanın Günlük Ücreti: " + car.DailyPrice);
                 Console.WriteLine("**************************************************************************************");
             }
 
