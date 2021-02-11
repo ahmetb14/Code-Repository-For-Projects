@@ -29,7 +29,7 @@ namespace ConsoleUI
             }
 
             Console.ReadLine();
-            
+
         }
 
         private static void Stage2()
