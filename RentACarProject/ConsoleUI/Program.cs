@@ -11,7 +11,52 @@ namespace ConsoleUI
         {
             //Stage1();
             //Stage2();
+            //Stage3();
 
+            UserManager userManager = new UserManager(new EfUserDal());
+            CustomerManager customerManager1 = new CustomerManager(new EfCustomerDal());
+            customerManager1.Add(new Customer {CompanyName = "Coco Games Limited Şirketi" });
+
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            CarManager carManager = new CarManager(new EfCarDal());
+            CustomerManager customerManager2 = new CustomerManager(new EfCustomerDal());
+
+            var car = carManager.GetById(3);
+            var customer = customerManager2.GetById(1);
+
+            if (car.Data == null)
+            {
+                Console.WriteLine("Araba Veri Tabanında Bulunamadı!");
+            }
+            else if (customer.Data == null)
+            {
+                Console.WriteLine("Müşteri Veri Tabanında Bulunamadı!");
+            }
+            else
+            {
+                var result = rentalManager.Add(new Rental
+                {             
+                    CustomerId = customer.Data.Id,
+                    RentDate = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")), 
+                    CarId = 1,
+                    ReturnDate = DateTime.Now
+                });
+                if (result.Success)
+                {
+                    Console.WriteLine(result.Message);
+                }
+                else
+                {
+                    Console.WriteLine(result.Message);
+                }
+
+                Console.ReadLine();
+
+            }
+        }
+
+        private static void Stage3()
+        {
             CarManager productManager = new CarManager(new EfCarDal());
 
             var result = productManager.GetCarDetails();
@@ -29,7 +74,6 @@ namespace ConsoleUI
             }
 
             Console.ReadLine();
-
         }
 
         private static void Stage2()
