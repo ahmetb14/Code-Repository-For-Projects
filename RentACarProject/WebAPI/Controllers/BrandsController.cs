@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
                 return BadRequest(result);
             }
         }
-        //Mesaj iletisi eksik??
+
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {

@@ -21,13 +21,12 @@ namespace Business.Concrete
 
         public IResult Add(Car car)
         {
-            if (car.DailyPrice > 0)
+            if (car.DailyPrice == 0)
             {
-                return new SuccessResult(Messages.CarAdded);
+                return new ErrorResult(Messages.DailyPriceInvalid);
             }
             _carDal.Add(car);
-
-            return new ErrorResult(Messages.DailyPriceInvalid);
+            return new SuccessResult(Messages.CarAdded);   
         }
 
         public IResult Delete(Car car)
@@ -38,7 +37,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour == 23)
+            if (DateTime.Now.Hour == 1)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
             }
@@ -47,38 +46,36 @@ namespace Business.Concrete
 
         public IDataResult<Car> GetById(int id)
         {
-            return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == id));
+            return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == id),Messages.DesiredListed);
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            if (DateTime.Now.Hour == 23)
+            if (DateTime.Now.Hour == 1)
             {
                 return new ErrorDataResult<List<CarDetailDto>>(Messages.MaintenanceTime);
             }
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(),Messages.DesiredListed);
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id),Messages.DesiredListed);
         }
 
         public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id),Messages.DesiredListed);
         }
 
         public IResult Update(Car car)
         {
             if (car.DailyPrice > 0)
             {
+                _carDal.Update(car);
                 return new SuccessResult(Messages.CarUpdated);
             }
-            _carDal.Add(car);
-
             return new ErrorResult(Messages.DailyPriceInvalid);
         }
-
     }
 }

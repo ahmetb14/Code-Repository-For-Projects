@@ -33,6 +33,10 @@ namespace Business.Constants
         public static string UserNotFound = "Kullanıcı Bulunamadı!";
         public static string UserDeleted = "Kullanıcı Silindi!";
         public static string UserUpdated = "Kullanıcı Güncellendi!";
+        public static string CustomerListed = "Müşteriler Listelendi!";
+        public static string DesiredListed = "İstenilenler Listelendi!";
+        public static string UserListed = "Kullanıcılar Listelendi!";
+        public static string RentalListed = "Kiralamalar Listelendi";
 
     }
 }

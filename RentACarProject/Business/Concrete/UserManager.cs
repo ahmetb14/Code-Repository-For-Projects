@@ -37,7 +37,7 @@ namespace Business.Concrete
 
         public IDataResult<List<User>> GetAll()
         {
-            return new SuccessDataResult<List<User>>(_userDal.GetAll());
+            return new SuccessDataResult<List<User>>(_userDal.GetAll(),Messages.UserListed);
         }
 
         public IDataResult<User> GetById(int id)
@@ -45,19 +45,12 @@ namespace Business.Concrete
             var result = _userDal.Get(u => u.Id == u.Id);
             if (result != null)
             {
-                return new SuccessDataResult<User>(_userDal.Get(u => u.Id == u.Id));
+                return new SuccessDataResult<User>(_userDal.Get(u => u.Id == u.Id),Messages.DesiredListed);
             }
             else
             {
                 return new ErrorDataResult<User>(Messages.UserNotFound);
             }
-
-            //if (_userDal.Get(u => u.Id == u.Id) == null)
-            //{
-            //    return new ErrorDataResult<User>(Messages.UserNotFound);
-            //}
-            //return new SuccessDataResult<User>(_userDal.Get(u => u.Id == u.Id));
-
         }
 
         public IResult Update(User user)

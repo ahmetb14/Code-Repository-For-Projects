@@ -74,7 +74,7 @@ namespace WebAPI.Controllers
                 return BadRequest(result);
             }
         }
-        //Mesaj iletisi eksik??
+
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
@@ -88,7 +88,7 @@ namespace WebAPI.Controllers
                 return BadRequest(result);
             }
         }
-        //Mesaj iletisi eksik??
+
         [HttpGet("getcardetails")]
         public IActionResult GetCarDetails()
         {

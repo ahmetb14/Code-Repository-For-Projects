@@ -21,13 +21,13 @@ namespace Business.Concrete
         public IResult Add(Rental rental)
         {
             var carRentalList = _rentalDal.GetAll(r => r.Id == r.Id);
-            foreach (var carRental in carRentalList)
-            {
-                if (carRental.ReturnDate == null || carRental.ReturnDate > DateTime.Now)
-                {
-                    return new ErrorResult("Araba Kiralanamaz Çünkü Başka Bir Müşteride!");
-                }
-            }
+            //foreach (var carRental in carRentalList)
+            //{
+            //    if (carRental.ReturnDate == null || carRental.ReturnDate > DateTime.Now)
+            //    {
+            //        return new ErrorResult("Araba Kiralanamaz Çünkü Başka Bir Müşteride!");
+            //    }
+            //}
             _rentalDal.Add(rental);
             return new SuccessResult(Messages.RentalAdded);
         }
@@ -44,7 +44,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.RentalListed);
         }
 
         public IDataResult<Rental> GetById(int id)
@@ -54,7 +54,7 @@ namespace Business.Concrete
             {
                 return new ErrorDataResult<Rental>(Messages.RentalNotFound);
             }
-            return new SuccessDataResult<Rental>(rental);
+            return new SuccessDataResult<Rental>(rental,Messages.DesiredListed);
         }
 
         public IResult Update(Rental rental)
@@ -64,7 +64,7 @@ namespace Business.Concrete
                 return new ErrorResult(Messages.RentalNotFound);
             }
             _rentalDal.Update(rental);
-            return new ErrorResult(Messages.RentalUpdated);
+            return new SuccessResult(Messages.RentalUpdated);
         }
 
     }
