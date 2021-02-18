@@ -57,3 +57,8 @@ C:\Users\ahmet\source\repos\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAP
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
