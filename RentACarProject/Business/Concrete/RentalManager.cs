@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
@@ -18,16 +20,10 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
             var carRentalList = _rentalDal.GetAll(r => r.Id == r.Id);
-            //foreach (var carRental in carRentalList)
-            //{
-            //    if (carRental.ReturnDate == null || carRental.ReturnDate > DateTime.Now)
-            //    {
-            //        return new ErrorResult("Araba Kiralanamaz Çünkü Başka Bir Müşteride!");
-            //    }
-            //}
             _rentalDal.Add(rental);
             return new SuccessResult(Messages.RentalAdded);
         }

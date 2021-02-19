@@ -102,3 +102,9 @@ C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\En
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.csproj.CopyComplete
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.genruntimeconfig.cache
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll

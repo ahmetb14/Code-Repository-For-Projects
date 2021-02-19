@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XaJecrDvMj7mREwDEI2IORfPM7GH8U78e8zLkVrBR3QRhm6PHxBwKAGMVVIY1XHUj1wE/FomtYpWTeea8B6J8Q==",
+  "dgSpecHash": "cAfzMLv6wWNMqYVwYi9NiUlFpzH7a7qNJm3Aw/sAyexT+SX1eD1PODRq4jJ+oBUCNVDnYAX6jrQnITS2/IrHzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\ahmet\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
