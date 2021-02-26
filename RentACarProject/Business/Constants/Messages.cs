@@ -37,6 +37,10 @@ namespace Business.Constants
         public static string DesiredListed = "İstenilenler Listelendi!";
         public static string UserListed = "Kullanıcılar Listelendi!";
         public static string RentalListed = "Kiralamalar Listelendi";
+        public static string CarImagesAdded = "Kiralamalar Listelendi";
+        public static string CarImageLimit = "Kiralamalar Listelendi";
+        public static string CarImageListed = "Araba Resimleri Listelendi!";
+        public static string CarImageGetAll = "Tüm Araba Resimleri Getirildi!";
 
     }
 }

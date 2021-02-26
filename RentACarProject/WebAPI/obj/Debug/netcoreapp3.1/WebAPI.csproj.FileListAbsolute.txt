@@ -63,3 +63,6 @@ C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autof
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

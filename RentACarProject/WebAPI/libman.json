@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Images",
+      "destination": "lib/Images/"
+    }
+  ]
+}
