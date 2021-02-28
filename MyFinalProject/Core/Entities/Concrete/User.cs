@@ -14,6 +14,5 @@ namespace Core.Entities.Concrete
         public byte[] PasswordHash { get; set; }
         public bool Status { get; set; }
 
-        //22:05 Dersteyiz
     }
 }

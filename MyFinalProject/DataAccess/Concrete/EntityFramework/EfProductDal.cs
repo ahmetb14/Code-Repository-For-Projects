@@ -11,7 +11,6 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    //NuGet
     public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
     {
         public List<ProductDetailDto> GetProductDetails()

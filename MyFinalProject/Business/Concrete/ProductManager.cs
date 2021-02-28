@@ -30,7 +30,6 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
-        //00.25 Dersteyiz
         //Claim
         [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
@@ -51,9 +50,6 @@ namespace Business.Concrete
 
             return new SuccessResult(Messages.ProductAdded);
 
-
-           
-            //23:10 Dersteyiz
         }
 
 
