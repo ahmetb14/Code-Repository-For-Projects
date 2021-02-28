@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Core.Aspects.Autofac.Validation
 {
-    public class ValidationAspect : MethodInterception //Aspect = Method Başı Sonu Ortası Çalışabilecek Methoddur!
+    public class ValidationAspect : MethodInterception //Aspect
     {
         private Type _validatorType;
         public ValidationAspect(Type validatorType)
@@ -17,13 +17,11 @@ namespace Core.Aspects.Autofac.Validation
             //defensive coding
             if (!typeof(IValidator).IsAssignableFrom(validatorType))
             {
-                throw new System.Exception("Bu Bir Doğrulama Sınıfı Değil!");
+                throw new System.Exception("Bu bir doğrulama sınıfı değil");
             }
 
             _validatorType = validatorType;
         }
-
-        //Doğrulama Method Başında Yapıldığı İçin OnBeforu Ezdik Override Ettik!
         protected override void OnBefore(IInvocation invocation)
         {
             var validator = (IValidator)Activator.CreateInstance(_validatorType);
@@ -34,6 +32,7 @@ namespace Core.Aspects.Autofac.Validation
                 ValidationTool.Validate(validator, entity);
             }
         }
-    }
 
+        
+    }
 }

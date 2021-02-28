@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using DataAccess.Concrete.InMemory;
 using System;
 
 namespace ConsoleUI
@@ -12,11 +13,8 @@ namespace ConsoleUI
         {
             //Data Transformation Object
             ProductTest();
-            //IoC
+            //IoC 
             //CategoryTest();
-
-            Console.ReadLine();
-
         }
 
         private static void CategoryTest()
@@ -30,11 +28,12 @@ namespace ConsoleUI
 
         private static void ProductTest()
         {
-            ProductManager productManager = new ProductManager(new EfProductDal(), new CategoryManager(new EfCategoryDal()));
+            ProductManager productManager = new ProductManager(new EfProductDal()
+                ,new CategoryManager(new EfCategoryDal()));
 
             var result = productManager.GetProductDetails();
 
-            if (result.Success == true)
+            if (result.Success==true)
             {
                 foreach (var product in result.Data)
                 {
@@ -46,6 +45,7 @@ namespace ConsoleUI
                 Console.WriteLine(result.Message);
             }
 
+            
         }
     }
 }

@@ -15,10 +15,9 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        //Loosely coupled (gevşek bağımlılık)
-        //Naming convention
-        //IoC Container = Inversion of Control
-
+        //Loosely coupled
+        //naming convention
+        //IoC Container -- Inversion of Control
         IProductService _productService;
 
         public ProductsController(IProductService productService)
@@ -30,13 +29,12 @@ namespace WebAPI.Controllers
         public IActionResult GetAll()
         {
             //Swagger
-            //Dependency chain 
-            var result = _productService.GetAll();
+            //Dependency chain --
+            var result =  _productService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
             }
-
             return BadRequest(result);
 
         }
@@ -61,11 +59,12 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
-
             return BadRequest(result);
-
         }
+
+
     }
 }
 
-//Attrıbute = Bilgi verme imzalama görevi yapar. (C# da kullanılır.) / Annotatıon (Java'da ki karşılığı Attrıbute'ün)
+
+//22.05 DERSTEYİZ
