@@ -66,3 +66,11 @@ C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Fluen
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ahmet\source\repos\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

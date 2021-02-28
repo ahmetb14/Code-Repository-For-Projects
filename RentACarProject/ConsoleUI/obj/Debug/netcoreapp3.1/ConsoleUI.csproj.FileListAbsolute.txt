@@ -109,4 +109,13 @@ C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Ca
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
 C:\Users\ahmet\source\repos\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
