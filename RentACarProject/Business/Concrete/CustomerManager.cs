@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -38,7 +40,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Customer>> GetAll()
         {
-            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(),Messages.CustomerListed);
+            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(), Messages.CustomerListed);
         }
 
         public IDataResult<Customer> GetById(int id)
@@ -47,7 +49,7 @@ namespace Business.Concrete
             {
                 return new ErrorDataResult<Customer>(Messages.CustomerNotFound);
             }
-            return new SuccessDataResult<Customer>(_customerDal.Get(c => c.Id == c.Id),Messages.DesiredListed);
+            return new SuccessDataResult<Customer>(_customerDal.Get(c => c.Id == c.Id), Messages.DesiredListed);
         }
 
         public IResult Update(Customer customer)
@@ -59,6 +61,6 @@ namespace Business.Concrete
             _customerDal.Update(customer);
             return new SuccessResult(Messages.CustomerUpdated);
         }
-
     }
+
 }

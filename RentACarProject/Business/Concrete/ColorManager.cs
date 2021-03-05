@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -43,7 +45,7 @@ namespace Business.Concrete
 
         public IDataResult<Color> GetById(int colorId)
         {
-            return new SuccessDataResult<Color>(_colorDal.Get(c => c.Id == colorId),Messages.DesiredListed);
+            return new SuccessDataResult<Color>(_colorDal.Get(c => c.Id == colorId), Messages.DesiredListed);
         }
 
         public IResult Update(Color color)
@@ -51,6 +53,6 @@ namespace Business.Concrete
             _colorDal.Update(color);
             return new SuccessResult(Messages.ColorUpdated);
         }
-
     }
+
 }

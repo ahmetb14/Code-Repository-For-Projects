@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -40,7 +42,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.RentalListed);
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalListed);
         }
 
         public IDataResult<Rental> GetById(int id)
@@ -50,7 +52,7 @@ namespace Business.Concrete
             {
                 return new ErrorDataResult<Rental>(Messages.RentalNotFound);
             }
-            return new SuccessDataResult<Rental>(rental,Messages.DesiredListed);
+            return new SuccessDataResult<Rental>(rental, Messages.DesiredListed);
         }
 
         public IResult Update(Rental rental)
@@ -62,6 +64,6 @@ namespace Business.Concrete
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
         }
-
     }
+
 }

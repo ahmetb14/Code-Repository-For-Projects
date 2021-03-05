@@ -1,4 +1,5 @@
 ﻿using Castle.DynamicProxy;
+using Core.Aspects.Autofac.Performance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,10 @@ namespace Core.Utilities.Interceptors
                 .GetCustomAttributes<MethodInterceptionBaseAttribute>(true);
             classAttributes.AddRange(methodAttributes);
 
-            return classAttributes.OrderBy(x => x.Priority).ToArray();
+            classAttributes.Add(new PerformanceAspect(5));
 
+            return classAttributes.OrderBy(x => x.Priority).ToArray();
         }
     }
+
 }
