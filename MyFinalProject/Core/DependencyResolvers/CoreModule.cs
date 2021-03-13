@@ -19,5 +19,4 @@ namespace Core.DependencyResolvers
             serviceCollection.AddSingleton<ICacheManager, MemoryCacheManager>();
         }
     }
-
 }

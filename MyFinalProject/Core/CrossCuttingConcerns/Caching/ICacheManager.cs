@@ -14,5 +14,4 @@ namespace Core.CrossCuttingConcerns.Caching
         void RemoveByPattern(string pattern);
 
     }
-
 }

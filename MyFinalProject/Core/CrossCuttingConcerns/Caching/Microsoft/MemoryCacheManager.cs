@@ -11,8 +11,7 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
 {
     public class MemoryCacheManager : ICacheManager
     {
-        //Adapter Pattern System!
-
+        //Adapter Pattern
         IMemoryCache _memoryCache;
 
         public MemoryCacheManager()
@@ -64,7 +63,8 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
             {
                 _memoryCache.Remove(key);
             }
+            //23:15 DERSTEYİZ
+            //PUSH BASTIM :)
         }
     }
-
 }
