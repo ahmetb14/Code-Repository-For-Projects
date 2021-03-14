@@ -1,0 +1,29 @@
+<h2 class="text-center">Kiralık Araç Listesi</h2>
+
+<div *ngIf="dataLoaded == false" class="text-center">
+  <div class="spinner-border text-dark text-center" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<table class="table" *ngIf="dataLoaded == true">
+  <thead>
+    <tr>
+      <th>Araba İsmi</th>
+      <th>Müşteri İsmi</th>
+      <th>Teslim Alma Tarihi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rental of rentals">
+      <td>{{ rental.carName }}</td>
+      <td>{{ rental.customerName }}</td>
+      <td>
+        {{
+          rental.returnDate == null
+            ? "Teslim Alınmadı"
+            : (rental.returnDate | date: "dd-MM-YYYY")
+        }}
+      </td>
+    </tr>
+  </tbody>
+</table>

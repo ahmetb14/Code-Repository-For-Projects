@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj": {}
+    "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj": {
+    "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -92,21 +92,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj": {
+    "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
         "projectName": "ConsoleUI",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
-        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\ConsoleUI\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\ConsoleUI\\ConsoleUI.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\ConsoleUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,14 +120,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Business\\Business.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj"
               },
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -156,21 +156,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Core\\Core.csproj": {
+    "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Core\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -249,21 +249,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -277,8 +277,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -314,21 +314,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
+    "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -342,8 +342,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\ahmet\\source\\repos\\RentACarProject\\Core\\Core.csproj"
+              "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj"
               }
             }
           }
@@ -375,7 +375,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
