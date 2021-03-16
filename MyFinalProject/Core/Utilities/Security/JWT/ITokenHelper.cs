@@ -11,4 +11,3 @@ namespace Core.Utilities.Security.JWT
     }
 }
 
-//23.05 Dersteyiz
