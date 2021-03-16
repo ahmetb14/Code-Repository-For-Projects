@@ -1,5 +1,5 @@
 <ul class="list-group">
-    <li  [class]="getAllCategoryClass()" routerLink = "/products">Tüm Ürünler</li>
+    <li  [class]="getAllCategoryClass()" routerLink = "/products">Ürün Çeşitleri</li>
     <li (click)="setCurrentCategory(category)"
     routerLink = "/products/category/{{category.categoryId}}"
     *ngFor="let category of categories" 
@@ -7,4 +7,4 @@
     {{category.categoryName}}</li>
 </ul>
 
-<h5 *ngIf="currentCategory">{{currentCategory.categoryName}} seçtiniz!</h5>
+<h5 *ngIf="currentCategory">{{currentCategory.categoryName}} kategorisini seçtiniz!</h5>
