@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workaround", "Workspace\Workaround.csproj", "{CDA3B9ED-040B-497E-A42F-87078095835E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{AB2E223F-3EE8-402A-97C8-C1D44A98A0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{DC2AB366-4624-4CB4-B531-C38AC2C8F50A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA3B9ED-040B-497E-A42F-87078095835E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA3B9ED-040B-497E-A42F-87078095835E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA3B9ED-040B-497E-A42F-87078095835E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA3B9ED-040B-497E-A42F-87078095835E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2E223F-3EE8-402A-97C8-C1D44A98A0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2E223F-3EE8-402A-97C8-C1D44A98A0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2E223F-3EE8-402A-97C8-C1D44A98A0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2E223F-3EE8-402A-97C8-C1D44A98A0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2AB366-4624-4CB4-B531-C38AC2C8F50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2AB366-4624-4CB4-B531-C38AC2C8F50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2AB366-4624-4CB4-B531-C38AC2C8F50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2AB366-4624-4CB4-B531-C38AC2C8F50A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5A2053F-E33F-40D2-8531-6D150B93D60D}
+	EndGlobalSection
+EndGlobal

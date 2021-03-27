@@ -1,0 +1,41 @@
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.DataAccess.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.DataAccess.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.DataAccess.dll.config
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.xml
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csprojResolveAssemblyReference.cache
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csproj.CoreCompileInputs.cache
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.dll.config
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\FluentValidation.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\FluentValidation.xml
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Ninject.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Business\bin\Debug\Ninject.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.dll.config
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\FluentValidation.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Ninject.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.DataAccess.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.DataAccess.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.DataAccess.dll.config
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\FluentValidation.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\bin\Debug\Ninject.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csprojAssemblyReference.cache
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csproj.CoreCompileInputs.cache
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csproj.CopyComplete
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.pdb

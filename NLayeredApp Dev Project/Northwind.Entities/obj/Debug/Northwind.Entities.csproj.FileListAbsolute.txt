@@ -1,0 +1,12 @@
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csprojAssemblyReference.cache
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CoreCompileInputs.cache
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.pdb

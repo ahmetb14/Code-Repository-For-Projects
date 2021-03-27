@@ -1,0 +1,15 @@
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\RecapProject1.exe.config
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\RecapProject1.exe
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\RecapProject1.pdb
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.csprojAssemblyReference.cache
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.Form1.resources
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.Properties.Resources.resources
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.csproj.GenerateResource.cache
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.exe
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.pdb
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\EntityFramework.dll
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\EntityFramework.xml
+C:\Users\ahmet\source\repos\RecapProject1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ahmet\source\repos\RecapProject1\obj\Debug\RecapProject1.csproj.CopyComplete

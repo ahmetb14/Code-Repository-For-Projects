@@ -1,0 +1,27 @@
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.DataAccess.dll.config
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.DataAccess.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.DataAccess.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.Entities.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.Entities.pdb
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.dll
+C:\Users\Engin\source\repos\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.DataAccess.dll.config
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.DataAccess.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.DataAccess.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.Entities.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\Northwind.Entities.pdb
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.csprojAssemblyReference.cache
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.csproj.CoreCompileInputs.cache
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.csproj.CopyComplete
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.dll
+D:\Eğlence\Dosyalar\Çalışma Belgeleri\C# Dökümanları\36_ Proje Kodları\NLayeredAppDemo\Northwind.DataAccess\obj\Debug\Northwind.DataAccess.pdb
