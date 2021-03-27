@@ -1,2 +1,2 @@
 # Code-Repository-For-Projects
-Katmanlı mimari projeler, eğitimlerde geliştirdiğim projeler ve kendim geliştirdiğim proje bu depoda.
+Layered architectural projects, the projects I developed in trainings and the project I developed myself are in this warehouse.
