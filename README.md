@@ -1,2 +1,2 @@
 # Code-Repository-For-Projects
-All the codes of the projects and lessons held during the camp are in this repository.
+Katmanlı mimari projeler, eğitimlerde geliştirdiğim projeler ve kendim geliştirdiğim proje bu depoda.
