@@ -1,19 +1,19 @@
-<h2 class="text-center">Araç Listesi</h2>
+<h2 class="text-center">Araba Listesi</h2>
 
 <div *ngIf="dataLoaded == false" class="text-center">
   <div class="spinner-border text-dark text-center" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Yükleniyor...</span>
   </div>
 </div>
 
 <table *ngIf="dataLoaded == true" class="table">
   <thead>
     <tr>
-      <th>Araç Numarası</th>
+      <th>Araba Kimliği</th>
       <th>Renk Bilgisi</th>
-      <th>Marka İsmi</th>
-      <th>Model Bilgisi</th>
-      <th>Günlük Tutarı</th>
+      <th>Marka Adı</th>
+      <th>Model Yılı</th>
+      <th>Günlük Ücreti</th>
       <th>Hakkında Bilgi</th>
     </tr>
   </thead>
