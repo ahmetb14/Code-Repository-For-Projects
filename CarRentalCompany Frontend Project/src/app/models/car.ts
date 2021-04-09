@@ -4,5 +4,5 @@ export interface Car {
   brandName: String;
   modelYear: Number;
   dailyPrice: Number;
-  description: String;
+  descriptions: String;
 }

@@ -15,3 +15,4 @@ C:\Users\Ahmet Berkay Yılmaz\source\repos\RentACarProject\Core\obj\Debug\netsta
 C:\Users\Ahmet Berkay Yılmaz\source\repos\RentACarProject\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
 C:\Users\Ahmet Berkay Yılmaz\source\repos\RentACarProject\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Users\Ahmet Berkay Yılmaz\source\repos\RentACarProject\Core\obj\Debug\netstandard2.0\Core.pdb
+C:\Users\Ahmet Berkay Yılmaz\source\repos\RentACarProject\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
