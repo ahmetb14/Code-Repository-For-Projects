@@ -6886,11 +6886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj",
+      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6907,11 +6907,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Entities\\Entities.csproj"
             }
           }
         }

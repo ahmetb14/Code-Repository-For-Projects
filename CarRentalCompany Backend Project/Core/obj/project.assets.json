@@ -6814,11 +6814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",

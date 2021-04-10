@@ -6262,11 +6262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6283,17 +6283,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Business\\Business.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Business\\Business.csproj"
             },
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Core\\Core.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Core\\Core.csproj"
             },
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Entities\\Entities.csproj"
             }
           }
         }

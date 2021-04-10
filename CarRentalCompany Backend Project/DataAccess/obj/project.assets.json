@@ -6851,11 +6851,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Ahmet Berkay Yılmaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet Berkay Yılmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6872,8 +6872,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Berkay Yılmaz\\source\\repos\\Car Rental Company\\Entities\\Entities.csproj"
             }
           }
         }
