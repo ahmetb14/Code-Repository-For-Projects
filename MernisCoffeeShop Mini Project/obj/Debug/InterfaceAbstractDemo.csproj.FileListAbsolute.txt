@@ -1,0 +1,7 @@
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\bin\Debug\InterfaceAbstractDemo.exe.config
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\bin\Debug\InterfaceAbstractDemo.exe
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\bin\Debug\InterfaceAbstractDemo.pdb
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.csprojAssemblyReference.cache
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.exe
+C:\Users\Ahmet Berkay Yılmaz\source\repos\InterfaceAbstractDemo\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.pdb
