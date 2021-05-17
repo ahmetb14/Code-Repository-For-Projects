@@ -1,0 +1,12 @@
+/* CSS Dosyası*/
+
+/* Boşlukları Sıfırla */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: aquamarine;
+    background-image: url("Images/türkbayrağı.jpg");
+}
