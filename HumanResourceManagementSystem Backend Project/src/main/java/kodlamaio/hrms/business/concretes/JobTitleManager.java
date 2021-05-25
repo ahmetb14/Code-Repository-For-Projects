@@ -9,6 +9,10 @@ import kodlamaio.hrms.business.abstracts.JobTitleService;
 import kodlamaio.hrms.dataAccess.abstracts.JobTitleDao;
 import kodlamaio.hrms.entities.concretes.JobTitle;
 
+import kodlamaio.hrms.core.utilites.results.DataResult;
+import kodlamaio.hrms.core.utilites.results.ErrorDataResult;
+import kodlamaio.hrms.core.utilites.results.SuccessDataResult;
+
 @Service
 public class JobTitleManager implements JobTitleService {
 
@@ -23,6 +27,27 @@ public class JobTitleManager implements JobTitleService {
 	public List<JobTitle> getAll() {
 
 		return this.jobTitleDao.findAll();
+
+	}
+
+	@Override
+	public DataResult<JobTitle> add(JobTitle title) {
+
+		if (jobTitleDao.findAllByTitle(title.getTitle()).stream().count() != 0) {
+
+			return new ErrorDataResult<JobTitle>(null, " -> Bu İş Pozisyonu Sistemde Zaten Mevcut!");
+
+		}
+
+		return new SuccessDataResult<JobTitle>(this.jobTitleDao.save(title),
+				" -> Girilen İş Pozisyonu Sisteme Başarıyla Eklendi!");
+
+	}
+
+	@Override
+	public List<JobTitle> findJobTitles(String title) {
+
+		return this.jobTitleDao.findJobTitles(title);
 
 	}
 
