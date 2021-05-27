@@ -16,13 +16,11 @@ public class NorthwindApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NorthwindApplication.class, args);
 	}
-	
+
 	@Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
-          .select()                                  
-          .apis(RequestHandlerSelectors.basePackage("kodlamaio.northwind"))                                       
-          .build();                                           
-    }
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.basePackage("kodlamaio.northwind")).build();
+	}
 
 }
