@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 public class MernisSimulation {
 
-	public static boolean Validation(String tcNo) {
+	public boolean Validation(String tcNo) {
 
 		String regex = "^[0-9]+$";
 		Pattern pattern = Pattern.compile(regex);
@@ -27,3 +27,4 @@ public class MernisSimulation {
 	}
 
 }
+//Replace if you get the error: public "static" boolean change!

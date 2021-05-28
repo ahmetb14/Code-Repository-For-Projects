@@ -26,7 +26,7 @@ public class JobTitlesController {
 	}
 
 	@GetMapping("/getall")
-	public List<JobTitle> getAll() {
+	public DataResult<List<JobTitle>> getAll() {
 
 		return this.jobTitleService.getAll();
 
@@ -36,7 +36,7 @@ public class JobTitlesController {
 	public DataResult<JobTitle> add(@RequestBody JobTitle title) {
 
 		return this.jobTitleService.add(title);
-		
+
 	}
 
 }

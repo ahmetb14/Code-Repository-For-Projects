@@ -9,8 +9,8 @@ public interface JobTitleService {
 
 	DataResult<JobTitle> add(JobTitle title);
 
-	List<JobTitle> getAll();
+	DataResult<List<JobTitle>> getAll();
 
-	List<JobTitle> findJobTitles(String title);
+	DataResult<List<JobTitle>> findJobTitles(String title);
 
 }

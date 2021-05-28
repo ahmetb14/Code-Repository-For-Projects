@@ -43,7 +43,7 @@ public class EmailVerifyManager implements EmailVerifyService {
 	@Override
 	public void generateCode(EmailVerify code, Integer id) {
 
-		EmailVerify code_ = code;
+		//EmailVerify code_ = code;
 		code.setCode(null);
 		code.setVerified(false);
 		if (code.isVerified() == false) {

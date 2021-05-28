@@ -28,7 +28,7 @@ public class EmployersController {
 	}
 
 	@GetMapping("/getall")
-	public List<Employer> getAll() {
+	public DataResult<List<Employer>> getAll() {
 		
 		return this.employerService.getAll();
 		

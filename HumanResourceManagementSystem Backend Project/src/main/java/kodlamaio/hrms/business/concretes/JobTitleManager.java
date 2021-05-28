@@ -24,9 +24,10 @@ public class JobTitleManager implements JobTitleService {
 	}
 
 	@Override
-	public List<JobTitle> getAll() {
+	public DataResult<List<JobTitle>> getAll() {
 
-		return this.jobTitleDao.findAll();
+		return new SuccessDataResult<List<JobTitle>>(jobTitleDao.findAll(),
+				" -> İş Pozisyonları Sistemden Listelendi!");
 
 	}
 
@@ -45,9 +46,10 @@ public class JobTitleManager implements JobTitleService {
 	}
 
 	@Override
-	public List<JobTitle> findJobTitles(String title) {
+	public DataResult<List<JobTitle>> findJobTitles(String title) {
 
-		return this.jobTitleDao.findJobTitles(title);
+		return new SuccessDataResult<List<JobTitle>>(this.jobTitleDao.findJobTitles(title),
+				"-> İstenen Girdiler Sistemden Listelendi!");
 
 	}
 

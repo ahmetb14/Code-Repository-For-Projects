@@ -72,6 +72,7 @@ public class CandidateManager implements CandidateService {
 				.count() != 0) {
 			return new ErrorDataResult<Candidate>(null, " -> Bu TC Kimlik Numarası Sistemde Zaten Mevcut!");
 		}
+
 		User savedUser = this.userService.add(candidate);
 		this.emailVerificationService.generateCode(new EmailVerify(), savedUser.getId());
 		return new SuccessDataResult<Candidate>(this.candidateDao.save(candidate),
@@ -80,112 +81,75 @@ public class CandidateManager implements CandidateService {
 	}
 
 	private boolean firstNameChecker(Candidate candidate) {
-		
+
 		if (candidate.getFirstName().isBlank() || candidate.getFirstName().equals(null)) {
 			return false;
 		}
+
 		return true;
-		
+
 	}
 
 	private boolean lastNameChecker(Candidate candidate) {
-		
+
 		if (candidate.getLastName().isBlank() || candidate.getLastName().equals(null)) {
 			return false;
 		}
+
 		return true;
-		
+
 	}
 
 	private boolean birthDateChecker(Candidate candidate) {
-		
+
 		if (candidate.getBirthDate().equals(null)) {
 			return false;
 		}
+
 		return true;
-		
+
 	}
 
 	private boolean emailNullChecker(Candidate candidate) {
-		
+
 		if (candidate.getEmail().isBlank() || candidate.getEmail().equals(null)) {
 			return false;
 		}
+
 		return true;
-		
+
 	}
 
 	private boolean passwordNullChecker(Candidate candidate) {
-		
+
 		if (candidate.getPassword().isBlank() || candidate.getPassword().equals(null)) {
 			return false;
 		}
+
 		return true;
-		
+
 	}
 
 	private boolean isRealEmail(Candidate candidate) {
-		
+
 		String regex = "^(.+)@(.+)$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(candidate.getEmail());
+
 		if (!matcher.matches()) {
 			return false;
 		}
+
 		return true;
 
 	}
 
 	@Override
-	public List<Candidate> getAll() {
+	public DataResult<List<Candidate>> getAll() {
 
-		return this.candidateDao.findAll();
-		
-	}
+		return new SuccessDataResult<List<Candidate>>(this.candidateDao.findAll(),
+				" -> İş Arayanlar Listesi Sistemden Listelendi!");
 
-	private boolean firstNameValid(Candidate candidate) {
-		
-		if (candidate.getFirstName().isBlank() || candidate.getFirstName().equals(null)) {
-			return false;
-		}
-		return true;
-		
-	}
-
-	private boolean lastNameValid(Candidate candidate) {
-		
-		if (candidate.getLastName().isBlank() || candidate.getLastName().equals(null)) {
-			return false;
-		}
-		return true;
-		
-	}
-
-	private boolean birthDateValid(Candidate candidate) {
-		
-		if (candidate.getBirthDate().equals(null)) {
-			return false;
-		}
-		return true;
-		
-	}
-
-	private boolean emailNullValid(Candidate candidate) {
-		
-		if (candidate.getEmail().isBlank() || candidate.getEmail().equals(null)) {
-			return false;
-		}
-		return true;
-		
-	}
-
-	private boolean passwordNullValid(Candidate candidate) {
-		
-		if (candidate.getPassword().isBlank() || candidate.getPassword().equals(null)) {
-			return false;
-		}
-		return true;
-		
 	}
 
 }
