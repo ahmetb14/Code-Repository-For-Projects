@@ -19,18 +19,24 @@ public class CandidateController {
 	private CandidateService candidateService;
 
 	public CandidateController(CandidateService candidateService) {
+		
 		super();
 		this.candidateService = candidateService;
+		
 	}
 
 	@GetMapping("/getall")
 	public List<Candidate> getAll() {
+		
 		return this.candidateService.getAll();
+		
 	}
 
 	@PostMapping("/add")
 	public DataResult<Candidate> add(@RequestBody Candidate candidate) {
+		
 		return this.candidateService.add(candidate);
+		
 	}
 
 }

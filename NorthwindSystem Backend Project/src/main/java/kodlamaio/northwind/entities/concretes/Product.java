@@ -22,6 +22,7 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	@Column(name = "product_id")
 	private int id;
 

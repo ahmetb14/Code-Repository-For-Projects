@@ -13,6 +13,7 @@ public class GenerateRandomCode {
 		String dogrulamaKodu = "";
 
 		for (int k = 0; k < alphabet.length; k++) {
+			
 			Random r = new Random();
 			int randomNumber = r.nextInt(alphabet.length);
 			int randomNumber2 = r.nextInt(alphabet.length);
@@ -21,7 +22,9 @@ public class GenerateRandomCode {
 			dogrulamaKodu = alphabet[randomNumber] + "" + id + "" + alphabet[randomNumber2] + "" + random;
 
 		}
+		
 		return dogrulamaKodu; // Callback
+		
 	}
 
 }

@@ -17,13 +17,17 @@ public class EmailVerifyController {
 
 	@Autowired
 	public EmailVerifyController(EmailVerifyService emailVerificationService) {
+
 		super();
 		this.emailVerificationService = emailVerificationService;
+
 	}
 
 	@PostMapping("/update/{verificationCode}/{id}")
 	public Result setVerify(@RequestParam String verificationCode, @RequestParam Integer id) {
+
 		return emailVerificationService.verify(verificationCode, id);
+
 	}
 
 }

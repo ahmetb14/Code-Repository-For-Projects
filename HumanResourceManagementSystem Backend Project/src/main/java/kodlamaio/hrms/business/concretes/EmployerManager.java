@@ -51,10 +51,12 @@ public class EmployerManager implements EmployerService {
 		} else if (!isEmailAlreadyRegistered(employer)) {
 			return new ErrorDataResult<Employer>(null, " -> Bu Email Adresi Sistemde Zaten Mevcut, Tekrar Deneyin!");
 		}
+		
 		User savedUser = this.userService.add(employer);
 		this.emaiVerifyService.generateCode(new EmailVerify(), savedUser.getId());
 		return new SuccessDataResult<Employer>(this.employerDao.save(employer),
 				" -> İş Veren Hesabı Eklendi! Doğrulama Kodu Gönderildi: " + employer.getId());
+		
 	}
 
 	private boolean companyNameValid(Employer employer) {
@@ -63,16 +65,20 @@ public class EmployerManager implements EmployerService {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean webSiteValid(Employer employer) {
+		
 		if (employer.getWebAdress().isBlank() || employer.getWebAdress() == null) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean isRealEmployer(Employer employer) {
+		
 		String regex = "^(.+)@(.+)$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(employer.getEmail());
@@ -82,23 +88,29 @@ public class EmployerManager implements EmployerService {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean isEmailAlreadyRegistered(Employer employer) {
+		
 		if (employerDao.findAllByEmail(employer.getEmail()).stream().count() != 0) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean passwordNullValid(Employer employer) {
+		
 		if (employer.getPassword().isBlank() || employer.getPassword() == null) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean isRealPhoneNumber(Employer employer) {
+		
 		String patterns = "^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$"
 				+ "|^(\\+\\d{1,3}( )?)?(\\d{3}[ ]?){2}\\d{3}$"
 				+ "|^(\\+\\d{1,3}( )?)?(\\d{3}[ ]?)(\\d{2}[ ]?){2}\\d{2}$";
@@ -109,6 +121,7 @@ public class EmployerManager implements EmployerService {
 			return false;
 		}
 		return true;
+		
 	}
 
 	@Override

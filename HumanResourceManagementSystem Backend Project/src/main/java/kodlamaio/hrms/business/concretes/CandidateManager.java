@@ -80,41 +80,52 @@ public class CandidateManager implements CandidateService {
 	}
 
 	private boolean firstNameChecker(Candidate candidate) {
+		
 		if (candidate.getFirstName().isBlank() || candidate.getFirstName().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean lastNameChecker(Candidate candidate) {
+		
 		if (candidate.getLastName().isBlank() || candidate.getLastName().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean birthDateChecker(Candidate candidate) {
+		
 		if (candidate.getBirthDate().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean emailNullChecker(Candidate candidate) {
+		
 		if (candidate.getEmail().isBlank() || candidate.getEmail().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean passwordNullChecker(Candidate candidate) {
+		
 		if (candidate.getPassword().isBlank() || candidate.getPassword().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean isRealEmail(Candidate candidate) {
+		
 		String regex = "^(.+)@(.+)$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(candidate.getEmail());
@@ -129,41 +140,52 @@ public class CandidateManager implements CandidateService {
 	public List<Candidate> getAll() {
 
 		return this.candidateDao.findAll();
+		
 	}
 
 	private boolean firstNameValid(Candidate candidate) {
+		
 		if (candidate.getFirstName().isBlank() || candidate.getFirstName().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean lastNameValid(Candidate candidate) {
+		
 		if (candidate.getLastName().isBlank() || candidate.getLastName().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean birthDateValid(Candidate candidate) {
+		
 		if (candidate.getBirthDate().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean emailNullValid(Candidate candidate) {
+		
 		if (candidate.getEmail().isBlank() || candidate.getEmail().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 	private boolean passwordNullValid(Candidate candidate) {
+		
 		if (candidate.getPassword().isBlank() || candidate.getPassword().equals(null)) {
 			return false;
 		}
 		return true;
+		
 	}
 
 }

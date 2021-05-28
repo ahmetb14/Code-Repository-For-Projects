@@ -28,16 +28,21 @@ public class EmailVerifyManager implements EmailVerifyService {
 	public Result verify(String verificationCode, Integer id) {
 
 		EmailVerify ref = emailVerifyDao.findByUserId(id).get();
+
 		if (ref.getCode().equals(verificationCode)) {
 			ref.setVerified(true);
-			return new SuccessDataResult<EmailVerify>(this.emailVerifyDao.save(ref), " -> Doğrulama Kodu Geçerli, İşlem Başarılı!");
+			return new SuccessDataResult<EmailVerify>(this.emailVerifyDao.save(ref),
+					" -> Doğrulama Kodu Geçerli, İşlem Başarılı!");
 		}
-		return new ErrorDataResult<EmailVerify>(null, " -> Doğrulama Kodu Geçersiz, İşlem Başarısız Lütfen Tekrar Deneyin!");
+
+		return new ErrorDataResult<EmailVerify>(null,
+				" -> Doğrulama Kodu Geçersiz, İşlem Başarısız Lütfen Tekrar Deneyin!");
 
 	}
 
 	@Override
 	public void generateCode(EmailVerify code, Integer id) {
+
 		EmailVerify code_ = code;
 		code.setCode(null);
 		code.setVerified(false);
@@ -50,7 +55,9 @@ public class EmailVerifyManager implements EmailVerifyService {
 			emailVerifyDao.save(code);
 
 		}
+
 		return;
+
 	}
 
 }

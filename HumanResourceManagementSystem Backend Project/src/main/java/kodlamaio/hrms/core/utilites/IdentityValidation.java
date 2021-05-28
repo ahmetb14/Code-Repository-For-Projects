@@ -7,6 +7,7 @@ public class IdentityValidation {
 	public static boolean isRealPerson(String tcno) {
 
 		MernisSimulation mernisSimulation = new MernisSimulation();
+
 		return mernisSimulation.Validation(tcno);
 
 	}

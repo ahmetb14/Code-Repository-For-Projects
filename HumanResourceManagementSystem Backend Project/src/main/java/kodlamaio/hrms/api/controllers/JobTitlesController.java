@@ -36,6 +36,7 @@ public class JobTitlesController {
 	public DataResult<JobTitle> add(@RequestBody JobTitle title) {
 
 		return this.jobTitleService.add(title);
+		
 	}
 
 }

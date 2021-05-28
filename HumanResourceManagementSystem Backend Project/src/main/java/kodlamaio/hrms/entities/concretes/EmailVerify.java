@@ -32,4 +32,5 @@ public class EmailVerify {
 
 	@Column(name = "user_id")
 	private int userId;
+
 }

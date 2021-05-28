@@ -21,18 +21,24 @@ public class EmployersController {
 	private EmployerService employerService;
 
 	public EmployersController(EmployerService employerService) {
+		
 		super();
 		this.employerService = employerService;
+		
 	}
 
 	@GetMapping("/getall")
 	public List<Employer> getAll() {
+		
 		return this.employerService.getAll();
+		
 	}
 
 	@PostMapping("/add")
 	public DataResult<Employer> add(@RequestBody Employer employer) {
+		
 		return this.employerService.add(employer);
+		
 	}
 
 }
