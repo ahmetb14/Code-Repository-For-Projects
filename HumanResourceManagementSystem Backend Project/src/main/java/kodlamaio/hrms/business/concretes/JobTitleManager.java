@@ -36,7 +36,8 @@ public class JobTitleManager implements JobTitleService {
 
 		if (jobTitleDao.findAllByTitle(title.getTitle()).stream().count() != 0) {
 
-			return new ErrorDataResult<JobTitle>(null, " -> Bu İş Pozisyonu Sistemde Zaten Mevcut!");
+			return new ErrorDataResult<JobTitle>(null,
+					" -> Bu İş Pozisyonu Sistemde Zaten Mevcut Lütfen Tekrar Deneyiniz!");
 
 		}
 

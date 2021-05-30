@@ -5,10 +5,12 @@ import java.util.regex.Matcher;
 
 public class MernisSimulation {
 
-	public boolean Validation(String tcNo) {
+	public static boolean Validation(String tcNo) {
 
 		String regex = "^[0-9]+$";
+
 		Pattern pattern = Pattern.compile(regex);
+
 		Matcher matcher = pattern.matcher(tcNo);
 
 		if (tcNo.length() > 11) {
@@ -24,7 +26,7 @@ public class MernisSimulation {
 			return false;
 
 		}
+
 	}
 
 }
-//Replace if you get the error: public "static" boolean change!

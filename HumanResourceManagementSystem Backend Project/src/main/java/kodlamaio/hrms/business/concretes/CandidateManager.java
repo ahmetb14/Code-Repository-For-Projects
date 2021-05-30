@@ -10,12 +10,17 @@ import org.springframework.stereotype.Service;
 import kodlamaio.hrms.business.abstracts.CandidateService;
 import kodlamaio.hrms.business.abstracts.EmailVerifyService;
 import kodlamaio.hrms.business.abstracts.UserService;
+import kodlamaio.hrms.business.constants.CallbackMessages;
 import kodlamaio.hrms.core.utilites.IdentityValidation;
+import kodlamaio.hrms.core.utilites.business.BusinessEngine;
 import kodlamaio.hrms.core.utilites.results.DataResult;
-import kodlamaio.hrms.core.utilites.results.ErrorDataResult;
+import kodlamaio.hrms.core.utilites.results.ErrorResult;
+import kodlamaio.hrms.core.utilites.results.Result;
 import kodlamaio.hrms.core.utilites.results.SuccessDataResult;
+import kodlamaio.hrms.core.utilites.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.CandidateDao;
 import kodlamaio.hrms.entities.concretes.Candidate;
+
 import kodlamaio.hrms.entities.concretes.EmailVerify;
 import kodlamaio.hrms.entities.concretes.User;
 
@@ -40,115 +45,134 @@ public class CandidateManager implements CandidateService {
 	@Override
 	public DataResult<Candidate> add(Candidate candidate) {
 
-		if (!firstNameChecker(candidate)) {
-			return new ErrorDataResult<Candidate>(null, " -> Ad Alanı Boş Bırakılamaz!");
-		} else if (!lastNameChecker(candidate)) {
-			return new ErrorDataResult<Candidate>(null, " -> Soyad Alanı Boş Bırakılamaz!");
-		}
+		Result engine = BusinessEngine.run(firstNameChecker(candidate), lastNameChecker(candidate),
+				IdentityValidation.isRealPerson(candidate.getIdentificationNumber()), IdChecker(candidate),
+				birthDateChecker(candidate), emailNullChecker(candidate), isRealEmail(candidate),
+				passwordNullChecker(candidate), isMailRegistered(candidate));
 
-		else if (!IdentityValidation.isRealPerson(candidate.getIdentificationNumber())) {
-			return new ErrorDataResult<Candidate>(null, " -> TC Kimlik Numarası Doğrulanmadı, Tekrar Deneyin!");
-		} else if (candidate.getIdentificationNumber().isBlank()) {
-			return new ErrorDataResult<Candidate>(null, " -> TC Kimlik Numarası Alanı Boş Bırakılamaz!");
-		}
+		if (!engine.isSuccess()) {
 
-		else if (!birthDateChecker(candidate)) {
-			return new ErrorDataResult<Candidate>(null, " -> Doğum Tarihi Alanı Boş Bırakılamaz!");
-		}
-
-		else if (!emailNullChecker(candidate)) {
-			return new ErrorDataResult<Candidate>(null, " -> Email Alanı Boş Bırakılamaz!");
-		} else if (!isRealEmail(candidate)) {
-			return new ErrorDataResult<Candidate>(null, " -> Girilen Email Adresi Doğru Değildir!");
-		}
-
-		else if (!passwordNullChecker(candidate)) {
-			return new ErrorDataResult<Candidate>(null, " -> Şifre Alanı Boş Bırakılamaz!");
-		}
-
-		else if (candidateDao.findAllByEmail(candidate.getEmail()).stream().count() != 0) {
-			return new ErrorDataResult<Candidate>(null, " -> Bu Email Adresi Sistemde Zaten Mevcut!");
-		} else if (candidateDao.findAllByIdentificationNumber(candidate.getIdentificationNumber()).stream()
-				.count() != 0) {
-			return new ErrorDataResult<Candidate>(null, " -> Bu TC Kimlik Numarası Sistemde Zaten Mevcut!");
+			return new DataResult<Candidate>(null, false, engine.getMessage());
 		}
 
 		User savedUser = this.userService.add(candidate);
 		this.emailVerificationService.generateCode(new EmailVerify(), savedUser.getId());
 		return new SuccessDataResult<Candidate>(this.candidateDao.save(candidate),
-				" -> İş Arayan Hesabı Eklendi! Doğrulama Kodu Gönderildi: " + candidate.getId());
+				CallbackMessages.isRegisterSuccessForCandidateMessage);
 
 	}
 
-	private boolean firstNameChecker(Candidate candidate) {
+	private Result firstNameChecker(Candidate candidate) {
 
 		if (candidate.getFirstName().isBlank() || candidate.getFirstName().equals(null)) {
-			return false;
+
+			return new ErrorResult(CallbackMessages.requiredFirstName);
+
 		}
 
-		return true;
+		return new SuccessResult();
 
 	}
 
-	private boolean lastNameChecker(Candidate candidate) {
+	private Result lastNameChecker(Candidate candidate) {
 
 		if (candidate.getLastName().isBlank() || candidate.getLastName().equals(null)) {
-			return false;
+
+			return new ErrorResult(CallbackMessages.requiredLastName);
 		}
 
-		return true;
+		return new SuccessResult();
 
 	}
 
-	private boolean birthDateChecker(Candidate candidate) {
+	private Result birthDateChecker(Candidate candidate) {
 
 		if (candidate.getBirthDate().equals(null)) {
-			return false;
+
+			return new ErrorResult(CallbackMessages.requiredBirthDate);
 		}
 
-		return true;
+		return new SuccessResult();
 
 	}
 
-	private boolean emailNullChecker(Candidate candidate) {
+	private Result emailNullChecker(Candidate candidate) {
 
 		if (candidate.getEmail().isBlank() || candidate.getEmail().equals(null)) {
-			return false;
+
+			return new ErrorResult(CallbackMessages.requiredEmail);
 		}
 
-		return true;
+		return new SuccessResult();
 
 	}
 
-	private boolean passwordNullChecker(Candidate candidate) {
+	private Result passwordNullChecker(Candidate candidate) {
 
 		if (candidate.getPassword().isBlank() || candidate.getPassword().equals(null)) {
-			return false;
+
+			return new ErrorResult(CallbackMessages.requiredPassword);
 		}
 
-		return true;
+		return new SuccessResult();
 
 	}
 
-	private boolean isRealEmail(Candidate candidate) {
+	private Result isRealEmail(Candidate candidate) {
 
 		String regex = "^(.+)@(.+)$";
+
 		Pattern pattern = Pattern.compile(regex);
+
 		Matcher matcher = pattern.matcher(candidate.getEmail());
 
 		if (!matcher.matches()) {
-			return false;
+
+			return new ErrorResult(CallbackMessages.isRealMail);
 		}
 
-		return true;
+		return new SuccessResult();
 
 	}
+
+	private Result IdChecker(Candidate candidate) {
+
+		if (candidate.getIdentificationNumber().isBlank()) {
+
+			return new ErrorResult(CallbackMessages.requiredId);
+		}
+
+		return new SuccessResult();
+
+	}
+
+	private Result isMailRegistered(Candidate candidate) {
+
+		if (candidateDao.findByEmail(candidate.getEmail()).stream().count() != 0) {
+
+			return new ErrorResult(CallbackMessages.alreadyRegisteredMail);
+
+		}
+
+		return new SuccessResult();
+
+	}
+
+//	private Result isIdRegistered(Candidate candidate) {
+//
+//		if (candidateDao.findAllByIdentificationNumber(candidate.getIdentificationNumber()).stream().count() != 0) {
+//
+//			return new ErrorResult(CallbackMessages.alreadyRegisteredId);
+//		}
+//
+//		return new SuccessResult();
+//
+//	}
 
 	@Override
 	public DataResult<List<Candidate>> getAll() {
 
-		return new SuccessDataResult<List<Candidate>>(this.candidateDao.findAll(),
-				" -> İş Arayanlar Listesi Sistemden Listelendi!");
+		return new SuccessDataResult<List<Candidate>>(this.candidateDao.findAll(), CallbackMessages.listedCandidates);
 
 	}
 
