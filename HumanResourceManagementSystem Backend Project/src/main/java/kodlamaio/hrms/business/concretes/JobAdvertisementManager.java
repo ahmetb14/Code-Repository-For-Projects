@@ -39,7 +39,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> getAll() {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(jobAdvertisementDao.findAll(),
-				"-> Data Sistemden Listelendi!");
+				" -> Data Sistemden Listelendi!");
 
 	}
 
@@ -69,6 +69,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findAllByIsActive(true),
 				" -> Data Sistemden Listelendi!");
+
 	}
 
 	@Override
@@ -86,7 +87,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		if (!this.employerDao.existsById(id)) {
 
 			return new ErrorDataResult<List<JobAdvertisement>>(
-					"-> İş Veren Hesabı Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
+					" -> İş Veren Hesabı Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
 
 		} else {
 
@@ -144,7 +145,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getDescription().isEmpty()) {
 
-			return new ErrorResult("-> İş Tanımı Alanı Boş Bırakılamaz Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> İş Tanımı Alanı Boş Bırakılamaz Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -204,7 +205,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getMinSalary() >= jobAdvertisement.getMaxSalary()) {
 
-			return new ErrorResult("-> Minimum Maaş İle Maksimum Maaş Alanıları Eşit Olamaz Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Minimum Maaş İle Maksimum Maaş Alanıları Eşit Olamaz Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -231,6 +232,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 			return new ErrorResult(" -> Son Başvuru Tarihi Alanı Girilmek Zorundadır Lütfen Tekrar Deneyiniz!");
 
 		}
+
 		return new SuccessResult();
 
 	}

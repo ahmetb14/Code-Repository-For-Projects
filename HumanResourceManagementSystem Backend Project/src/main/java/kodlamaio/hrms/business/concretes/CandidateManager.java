@@ -53,10 +53,13 @@ public class CandidateManager implements CandidateService {
 		if (!engine.isSuccess()) {
 
 			return new DataResult<Candidate>(null, false, engine.getMessage());
+
 		}
 
 		User savedUser = this.userService.add(candidate);
+
 		this.emailVerificationService.generateCode(new EmailVerify(), savedUser.getId());
+
 		return new SuccessDataResult<Candidate>(this.candidateDao.save(candidate),
 				CallbackMessages.isRegisterSuccessForCandidateMessage);
 
@@ -79,6 +82,7 @@ public class CandidateManager implements CandidateService {
 		if (candidate.getLastName().isBlank() || candidate.getLastName().equals(null)) {
 
 			return new ErrorResult(CallbackMessages.requiredLastName);
+
 		}
 
 		return new SuccessResult();
@@ -90,6 +94,7 @@ public class CandidateManager implements CandidateService {
 		if (candidate.getBirthDate().equals(null)) {
 
 			return new ErrorResult(CallbackMessages.requiredBirthDate);
+
 		}
 
 		return new SuccessResult();
@@ -101,6 +106,7 @@ public class CandidateManager implements CandidateService {
 		if (candidate.getEmail().isBlank() || candidate.getEmail().equals(null)) {
 
 			return new ErrorResult(CallbackMessages.requiredEmail);
+
 		}
 
 		return new SuccessResult();
@@ -112,6 +118,7 @@ public class CandidateManager implements CandidateService {
 		if (candidate.getPassword().isBlank() || candidate.getPassword().equals(null)) {
 
 			return new ErrorResult(CallbackMessages.requiredPassword);
+
 		}
 
 		return new SuccessResult();
@@ -129,6 +136,7 @@ public class CandidateManager implements CandidateService {
 		if (!matcher.matches()) {
 
 			return new ErrorResult(CallbackMessages.isRealMail);
+
 		}
 
 		return new SuccessResult();
@@ -140,6 +148,7 @@ public class CandidateManager implements CandidateService {
 		if (candidate.getIdentificationNumber().isBlank()) {
 
 			return new ErrorResult(CallbackMessages.requiredId);
+
 		}
 
 		return new SuccessResult();
@@ -163,6 +172,7 @@ public class CandidateManager implements CandidateService {
 //		if (candidateDao.findAllByIdentificationNumber(candidate.getIdentificationNumber()).stream().count() != 0) {
 //
 //			return new ErrorResult(CallbackMessages.alreadyRegisteredId);
+//	
 //		}
 //
 //		return new SuccessResult();

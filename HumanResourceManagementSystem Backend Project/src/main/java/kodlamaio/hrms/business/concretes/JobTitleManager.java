@@ -50,7 +50,7 @@ public class JobTitleManager implements JobTitleService {
 	public DataResult<List<JobTitle>> findJobTitles(String title) {
 
 		return new SuccessDataResult<List<JobTitle>>(this.jobTitleDao.findJobTitles(title),
-				"-> İstenen Girdiler Sistemden Listelendi!");
+				" -> İstenen Girdiler Sistemden Listelendi!");
 
 	}
 
