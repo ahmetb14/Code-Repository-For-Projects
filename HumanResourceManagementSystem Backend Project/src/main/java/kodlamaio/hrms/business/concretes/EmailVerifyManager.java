@@ -46,8 +46,6 @@ public class EmailVerifyManager implements EmailVerifyService {
 	@Override
 	public void generateCode(EmailVerify code, Integer id) {
 
-		// EmailVerify code_ = code;
-
 		code.setCode(null);
 
 		code.setVerified(false);

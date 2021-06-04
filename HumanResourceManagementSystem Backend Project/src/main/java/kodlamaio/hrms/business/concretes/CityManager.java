@@ -31,10 +31,8 @@ public class CityManager implements CityService {
 	@Override
 	public DataResult<List<City>> getAll() {
 
-		// Result engine = BusinessEngine.run(null);
-
 		return new SuccessDataResult<List<City>>(this.cityDao.findAll(),
-				" -> Şehirler Sistemden Başarıyla Listelendi!");
+				" -> Şehirler Ve Bilgileri Sistemden Başarıyla Listelendi!");
 
 	}
 

@@ -14,6 +14,7 @@ import kodlamaio.hrms.business.constants.CallbackMessages;
 import kodlamaio.hrms.core.utilites.IdentityValidation;
 import kodlamaio.hrms.core.utilites.business.BusinessEngine;
 import kodlamaio.hrms.core.utilites.results.DataResult;
+import kodlamaio.hrms.core.utilites.results.ErrorDataResult;
 import kodlamaio.hrms.core.utilites.results.ErrorResult;
 import kodlamaio.hrms.core.utilites.results.Result;
 import kodlamaio.hrms.core.utilites.results.SuccessDataResult;
@@ -52,7 +53,7 @@ public class CandidateManager implements CandidateService {
 
 		if (!engine.isSuccess()) {
 
-			return new DataResult<Candidate>(null, false, engine.getMessage());
+			return new ErrorDataResult(null,engine.getMessage());
 
 		}
 
@@ -166,18 +167,6 @@ public class CandidateManager implements CandidateService {
 		return new SuccessResult();
 
 	}
-
-//	private Result isIdRegistered(Candidate candidate) {
-//
-//		if (candidateDao.findAllByIdentificationNumber(candidate.getIdentificationNumber()).stream().count() != 0) {
-//
-//			return new ErrorResult(CallbackMessages.alreadyRegisteredId);
-//	
-//		}
-//
-//		return new SuccessResult();
-//
-//	}
 
 	@Override
 	public DataResult<List<Candidate>> getAll() {

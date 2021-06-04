@@ -39,7 +39,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> getAll() {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(jobAdvertisementDao.findAll(),
-				" -> Data Sistemden Listelendi!");
+				" -> İş İlanları Sistemden Başarıyla Listelendi!");
 
 	}
 
@@ -60,7 +60,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		this.jobAdvertisementDao.save(jobAdvertisement);
 
-		return new SuccessResult(" -> İşlem Başarılı Eklendi!");
+		return new SuccessResult(" -> İşlem Başarılı İş İlanı Sisteme Eklendi!");
 
 	}
 
@@ -68,7 +68,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> findAllByIsActive() {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findAllByIsActive(true),
-				" -> Data Sistemden Listelendi!");
+				" -> Aktif İş İlanları Sistemden Başarıyla Listelendi!");
 
 	}
 
@@ -77,7 +77,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(
 				this.jobAdvertisementDao.findAllByIsActiveOrderByCreatedDateDesc(true),
-				" -> Data Sistemden Listelendi!");
+				" -> Aktif İş İlanları Sistemden Başarıyla Sıralandı!");
 
 	}
 
@@ -92,7 +92,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		} else {
 
 			return new SuccessDataResult<List<JobAdvertisement>>(
-					this.jobAdvertisementDao.getEmployersActiveJobAdvertisement(id), " -> Data Sistemden Listelendi!");
+					this.jobAdvertisementDao.getEmployersActiveJobAdvertisement(id), " -> İstenen Şirketin İş İlanları Listelendi!");
 
 		}
 

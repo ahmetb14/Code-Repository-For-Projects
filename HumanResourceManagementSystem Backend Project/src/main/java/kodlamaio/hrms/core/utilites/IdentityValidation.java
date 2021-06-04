@@ -9,11 +9,12 @@ public class IdentityValidation {
 
 	public static Result isRealPerson(String tcno) {
 
-//		MernisSimulation mernisSimulation = new MernisSimulation();
-
 		if (MernisSimulation.Validation(tcno) == true) {
+
 			return new SuccessResult();
+
 		}
+
 		return new ErrorResult(" -> Türkiye Cumhuriyeti Kimliği Olmak Zorundadır!");
 
 	}
