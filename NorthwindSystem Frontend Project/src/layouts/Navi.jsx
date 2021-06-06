@@ -11,7 +11,7 @@ export default function Navi() {
           <Menu.Item name="messages" />
 
           <Menu.Menu position="right">
-            <CartSummary/>
+            <CartSummary />
             <Menu.Item>
               <Button primary>Sign Up</Button>
             </Menu.Item>
