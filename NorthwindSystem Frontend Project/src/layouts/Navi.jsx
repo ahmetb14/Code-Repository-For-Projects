@@ -7,13 +7,13 @@ export default function Navi() {
     <div>
       <Menu inverted fixed="top">
         <Container>
-          <Menu.Item name="home" />
-          <Menu.Item name="messages" />
+          <Menu.Item name="Northwind System App" />
+          <Menu.Item name="Ana Sayfa" />
 
           <Menu.Menu position="right">
             <CartSummary />
             <Menu.Item>
-              <Button primary>Sign Up</Button>
+              <Button primary>Üye Ol</Button>
             </Menu.Item>
           </Menu.Menu>
         </Container>

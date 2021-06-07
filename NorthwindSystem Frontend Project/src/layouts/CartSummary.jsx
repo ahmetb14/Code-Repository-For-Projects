@@ -3,11 +3,11 @@ import { Dropdown } from "semantic-ui-react";
 export default function CartSummary() {
   return (
     <div>
-      <Dropdown item text="Language">
+      <Dropdown item text="Diller">
         <Dropdown.Menu>
-          <Dropdown.Item>English</Dropdown.Item>
-          <Dropdown.Item>Russian</Dropdown.Item>
-          <Dropdown.Item>Spanish</Dropdown.Item>
+          <Dropdown.Item>Türkçe</Dropdown.Item>
+          <Dropdown.Item>İngilizce</Dropdown.Item>
+          <Dropdown.Item>Almanca</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </div>
