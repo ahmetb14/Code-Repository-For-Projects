@@ -1,0 +1,14 @@
+.ui.main.container {
+  margin-top: 6em;
+}
+
+.footer {
+  border-radius: 0px !important;
+}
+
+.footertext {
+  color: white;
+  padding: 20px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
