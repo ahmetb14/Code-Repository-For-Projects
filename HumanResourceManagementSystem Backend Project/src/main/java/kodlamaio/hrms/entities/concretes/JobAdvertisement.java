@@ -8,9 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-
 import javax.persistence.ManyToOne;
-
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -62,5 +60,13 @@ public class JobAdvertisement {
 	@ManyToOne
 	@JoinColumn(name = "employer_id")
 	private Employer employer;
+
+	@ManyToOne
+	@JoinColumn(name = "work_hours_id")
+	private WorkHour workHour;
+
+	@ManyToOne
+	@JoinColumn(name = "work_types_id")
+	private WorkType workType;
 
 }

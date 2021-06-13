@@ -1,4 +1,3 @@
-
 package kodlamaio.hrms.business.constants;
 
 public class CallbackMessages {
@@ -24,5 +23,7 @@ public class CallbackMessages {
 	public static final String alreadyRegisteredId = " -> T.C. Kimlik Numarası Sistemde Zaten Kayıtlı!";
 
 	public static final String listedCandidates = " -> İş Arayanlar Sistemden Başarıyla Listelendi!";
+
+	public static final String systemUser = " -> Sistem Kullanıcısı Başarıyla Eklendi!";
 
 }
