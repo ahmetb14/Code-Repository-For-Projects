@@ -133,6 +133,8 @@ CREATE TABLE public.job_advertisements
     created_date timestamp without time zone,
     min_salary double precision NOT NULL,
     max_salary double precision NOT NULL,
+    work_hours_id integer NOT NULL,
+    work_types_id integer NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -147,6 +149,13 @@ CREATE TABLE public.languages
 (
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     languages_name character varying NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE public.system_users
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    user_id integer NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -174,6 +183,20 @@ CREATE TABLE public.verification_codes
     code character varying(38) NOT NULL,
     is_verified boolean NOT NULL,
     user_id integer NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE public.work_hours
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    work_hours character varying NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE public.work_types
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    work_type character varying NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -270,6 +293,24 @@ ALTER TABLE public.job_advertisements
 ALTER TABLE public.job_advertisements
     ADD FOREIGN KEY (job_title_id)
     REFERENCES public.job_titles (id)
+    NOT VALID;
+
+
+ALTER TABLE public.job_advertisements
+    ADD FOREIGN KEY (work_hours_id)
+    REFERENCES public.work_hours (id)
+    NOT VALID;
+
+
+ALTER TABLE public.job_advertisements
+    ADD FOREIGN KEY (work_types_id)
+    REFERENCES public.work_types (id)
+    NOT VALID;
+
+
+ALTER TABLE public.system_users
+    ADD FOREIGN KEY (user_id)
+    REFERENCES public.users (id)
     NOT VALID;
 
 
