@@ -36,6 +36,8 @@ public class JobAdvertisementDto {
 
 	private boolean isActive;
 
+	private boolean isConfirmed;
+
 	private int workHourId;
 
 	private int workTypeId;

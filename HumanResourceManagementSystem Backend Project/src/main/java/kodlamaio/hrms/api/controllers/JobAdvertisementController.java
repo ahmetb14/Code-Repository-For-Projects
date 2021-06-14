@@ -5,14 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.hrms.business.abstracts.JobAdvertisementService;
 import kodlamaio.hrms.core.utilites.results.DataResult;
 import kodlamaio.hrms.core.utilites.results.Result;
+
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
 import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
@@ -59,10 +62,38 @@ public class JobAdvertisementController {
 
 	}
 
+	@GetMapping("/getConfirmedJobAds")
+	public DataResult<List<JobAdvertisement>> getConfirmedJobAdvertisements() {
+
+		return this.jobAdvertisementService.getConfirmedJobAdvertisements();
+
+	}
+
+	@GetMapping("/getWaitingJobAds")
+	public DataResult<List<JobAdvertisement>> getWaitingJobAdvertisements() {
+
+		return this.jobAdvertisementService.getWaitingJobAdvertisements();
+
+	}
+
+	@GetMapping("/getOneById")
+	public DataResult<List<JobAdvertisement>> getOneById(@RequestParam int id) {
+
+		return this.jobAdvertisementService.getOneJobAds(id);
+
+	}
+
 	@PostMapping("/add")
 	public Result add(@RequestBody JobAdvertisementDto jobAdvertisement) {
 
 		return this.jobAdvertisementService.add(jobAdvertisement);
+
+	}
+
+	@PostMapping("confirmJobAdById")
+	public Result add(@RequestParam int id) {
+
+		return this.jobAdvertisementService.confirmJobAd(id);
 
 	}
 

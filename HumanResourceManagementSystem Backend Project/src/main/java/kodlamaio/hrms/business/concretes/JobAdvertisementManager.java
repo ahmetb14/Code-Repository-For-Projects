@@ -242,4 +242,47 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 	}
 
+	@Override
+	public DataResult<List<JobAdvertisement>> getConfirmedJobAdvertisements() {
+
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getWaitingJobAdvertisements(),
+				" -> Onaylanmış İş İlanları Sistemden Listelendi!");
+
+	}
+
+	@Override
+	public DataResult<List<JobAdvertisement>> getWaitingJobAdvertisements() {
+
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getWaitingJobAdvertisements(),
+				" -> Onaylanmış İş İlanları Sistemden Listelendi!");
+
+	}
+
+	@Override
+	public DataResult<List<JobAdvertisement>> getOneJobAds(int id) {
+
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getOneById(id),
+				" -> İş İlanı Detayları Sistemden Başarıyla Getirildi!");
+
+	}
+
+	@Override
+	public Result confirmJobAd(int id) {
+
+		if (this.jobAdvertisementDao.existsById(id)) {
+
+			JobAdvertisement ref = this.jobAdvertisementDao.getOne(id);
+
+			ref.setConfirmed(true);
+
+			jobAdvertisementDao.save(ref);
+
+			return new SuccessResult(" -> İş İlanı Hrms Kullanıcısı Tarafından Sistemden Başarıyla Onaylandı!");
+
+		}
+
+		return new ErrorResult(" -> İstenen İş İlanı Bulunamadı Lütfen Tekrar Deneyiniz!");
+
+	}
+
 }

@@ -8,7 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+
 import javax.persistence.ManyToOne;
+
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -48,6 +50,9 @@ public class JobAdvertisement {
 
 	@Column(name = "is_active")
 	private boolean isActive;
+
+	@Column(name = "is_confirmed_by_admin")
+	private boolean isConfirmed;
 
 	@ManyToOne
 	@JoinColumn(name = "city_id")
