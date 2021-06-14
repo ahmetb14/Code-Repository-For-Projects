@@ -135,6 +135,7 @@ CREATE TABLE public.job_advertisements
     max_salary double precision NOT NULL,
     work_hours_id integer NOT NULL,
     work_types_id integer NOT NULL,
+    is_confirmed_by_admin boolean,
     PRIMARY KEY (id)
 );
 
