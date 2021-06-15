@@ -5,21 +5,28 @@ import { Icon, Menu } from "semantic-ui-react";
 export default function SideMenu() {
   return (
     <div>
-      <Menu inverted icon="labeled" vertical>
-        <Menu.Item name="address book" as={Link} to={"/JobPositionDirectory"}>
-          <Icon name="address book" />
-          Pozisyonlar
+      <Menu
+        className="sidemenu"
+        inverted
+        icon="labeled"
+        color="brown"
+        vertical
+        size="small"
+      >
+        <Menu.Item name="bookmark">
+          <Icon name="bookmark" />
+          Sayfa Kısımları
         </Menu.Item>
-        <Menu.Item name="address card" as={Link} to={"/EmployerDirectory"}>
-          <Icon name="address card" />
+        <Menu.Item name="world" as={Link} to={"/JobPositionDirectory"}>
+          <Icon name="world" />
+          İş Pozisyonları
+        </Menu.Item>
+        <Menu.Item name="users" as={Link} to={"/EmployerDirectory"}>
+          <Icon name="users" />
           İş Verenler
         </Menu.Item>
-        <Menu.Item
-          name="envelope open"
-          as={Link}
-          to={"/JobAdvertisementDirectory"}
-        >
-          <Icon name="envelope open" />
+        <Menu.Item name="bell" as={Link} to={"/JobAdvertisementDirectory"}>
+          <Icon name="bell" />
           İş İlanları
         </Menu.Item>
       </Menu>

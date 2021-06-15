@@ -16,10 +16,10 @@ export default function JobPositionDirectory() {
   return (
     <div>
       <Header as="h2">
-        <Icon name="list alternate outline" />
+        <Icon name="clone outline" />
         <Header.Content>İş Pozisyonu Listesi</Header.Content>
       </Header>
-      <Table color="orange" key="orange">
+      <Table color="brown" key="brown">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>İş Pozisyonları</Table.HeaderCell>

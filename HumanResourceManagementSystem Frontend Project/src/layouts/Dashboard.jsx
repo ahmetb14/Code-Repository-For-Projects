@@ -11,10 +11,10 @@ export default function Dashboard() {
     <div>
       <Grid>
         <Grid.Row>
-          <Grid.Column width={2}>
+          <Grid.Column width={3}>
             <SideMenu />
           </Grid.Column>
-          <Grid.Column width={14}>
+          <Grid.Column width={13}>
             <Route
               exact
               path="/JobAdvertisementDirectory"

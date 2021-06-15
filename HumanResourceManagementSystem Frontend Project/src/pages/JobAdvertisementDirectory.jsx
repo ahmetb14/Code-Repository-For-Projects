@@ -16,10 +16,10 @@ export default function JobAdvertisementDirectory() {
   return (
     <div>
       <Header as="h2">
-        <Icon name="list alternate outline" />
+        <Icon name="clone outline" />
         <Header.Content>İş İlanları Listesi</Header.Content>
       </Header>
-      <Table color="orange" key="orange">
+      <Table color="brown" key="brown">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>İş Pozisyonu</Table.HeaderCell>
