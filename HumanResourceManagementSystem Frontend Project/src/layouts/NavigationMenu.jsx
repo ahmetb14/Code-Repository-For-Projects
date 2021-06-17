@@ -22,7 +22,7 @@ export default function NavigationMenu() {
 
   return (
     <div>
-      <Menu className="navi" inverted fixed="top" size="big">
+      <Menu className="navi" inverted fixed="top" size="huge">
         <Container>
           <Menu.Item name="briefcase">
             <Icon name="briefcase" size="large" />

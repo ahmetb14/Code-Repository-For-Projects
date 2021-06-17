@@ -5,6 +5,7 @@ import { Route } from "react-router";
 import JobAdvertisementDirectory from "../pages/JobAdvertisementDirectory";
 import JobPositionDirectory from "../pages/JobPositionDirectory";
 import EmployerDirectory from "../pages/EmployerDirectory";
+import CreateJobAdvertisementDirectory from "../pages/CreateJobAdvertisementDirectory";
 
 export default function Dashboard() {
   return (
@@ -29,6 +30,11 @@ export default function Dashboard() {
               exact
               path="/JobPositionDirectory"
               component={JobPositionDirectory}
+            />
+            <Route
+              exact
+              path="/CreateJobAdvertisementDirectory"
+              component={CreateJobAdvertisementDirectory}
             />
           </Grid.Column>
         </Grid.Row>

@@ -10,7 +10,6 @@ export default class candidateSchoolService {
     );
   }
 
-  //curl -X GET "http://localhost:8080/api/candidateschools/getcandidateschoolswithordered?id=1" -H "accept: */*"
   orderedCandidatesSchoolSwithOrdered(id) {
     return axios.get(
       "http://localhost:8080/api/candidateschools/getcandidateschoolswithordered?id=" +

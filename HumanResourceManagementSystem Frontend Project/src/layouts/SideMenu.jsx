@@ -29,6 +29,14 @@ export default function SideMenu() {
           <Icon name="bell" />
           İş İlanları
         </Menu.Item>
+        <Menu.Item
+          name="hourglass"
+          as={Link}
+          to={"/CreateJobAdvertisementDirectory"}
+        >
+          <Icon name="hourglass" />
+          İş İlanı Ekle
+        </Menu.Item>
       </Menu>
     </div>
   );
