@@ -310,7 +310,7 @@ export default function CreateJobAdvertisementDirectory() {
               icon="add"
               positive
               type="submit"
-              style={{ marginLeft: "20px" }}
+              style={{ marginLeft: "380px" }}
             />
           </Form>
         </Card.Content>
