@@ -61,6 +61,7 @@ CREATE TABLE public.candidates_job_experiences
     job_titles_id integer NOT NULL,
     candidates_cv_id integer NOT NULL,
     is_continue boolean NOT NULL,
+    job_detail text,
     PRIMARY KEY (id)
 );
 
@@ -72,6 +73,7 @@ CREATE TABLE public.candidates_lang
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     candidates_cv_id integer NOT NULL,
     languages_id integer NOT NULL,
+    level integer,
     PRIMARY KEY (id)
 );
 
@@ -93,24 +95,6 @@ CREATE TABLE public.cities
     PRIMARY KEY (id)
 );
 
-CREATE TABLE public.employees
-(
-    id integer NOT NULL,
-    first_name character varying(25) NOT NULL,
-    last_name character varying(25) NOT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE public.employer_activation_by_employees
-(
-    id integer NOT NULL,
-    employer_id integer NOT NULL,
-    confirmed_employee_id integer,
-    is_confirmed boolean NOT NULL,
-    confirmed_date date,
-    PRIMARY KEY (id)
-);
-
 CREATE TABLE public.employers
 (
     id integer NOT NULL,
@@ -119,6 +103,17 @@ CREATE TABLE public.employers
     phone_number character varying(12) NOT NULL,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE public.favs
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    job_advertisement_id integer NOT NULL,
+    candidate_id integer NOT NULL,
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE public.favs
+    IS 'favoriler';
 
 CREATE TABLE public.job_advertisements
 (
@@ -255,27 +250,21 @@ ALTER TABLE public.candidates_talent
     NOT VALID;
 
 
-ALTER TABLE public.employees
-    ADD FOREIGN KEY (id)
-    REFERENCES public.users (id)
-    NOT VALID;
-
-
-ALTER TABLE public.employer_activation_by_employees
-    ADD FOREIGN KEY (confirmed_employee_id)
-    REFERENCES public.employees (id)
-    NOT VALID;
-
-
-ALTER TABLE public.employer_activation_by_employees
-    ADD FOREIGN KEY (employer_id)
-    REFERENCES public.employers (id)
-    NOT VALID;
-
-
 ALTER TABLE public.employers
     ADD FOREIGN KEY (id)
     REFERENCES public.users (id)
+    NOT VALID;
+
+
+ALTER TABLE public.favs
+    ADD FOREIGN KEY (candidate_id)
+    REFERENCES public.candidates (id)
+    NOT VALID;
+
+
+ALTER TABLE public.favs
+    ADD FOREIGN KEY (job_advertisement_id)
+    REFERENCES public.job_advertisements (id)
     NOT VALID;
 
 
