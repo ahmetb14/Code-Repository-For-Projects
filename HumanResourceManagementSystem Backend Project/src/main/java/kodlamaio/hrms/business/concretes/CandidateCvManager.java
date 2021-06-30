@@ -9,7 +9,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import kodlamaio.hrms.business.abstracts.CandidateCvService;
 import kodlamaio.hrms.core.utilites.business.ImageService;
+import kodlamaio.hrms.core.utilites.converters.DtoConverterService;
 import kodlamaio.hrms.core.utilites.results.DataResult;
+import kodlamaio.hrms.core.utilites.results.ErrorDataResult;
 import kodlamaio.hrms.core.utilites.results.Result;
 import kodlamaio.hrms.core.utilites.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilites.results.SuccessResult;
@@ -23,6 +25,7 @@ import kodlamaio.hrms.entities.concretes.CandidateJobExperience;
 import kodlamaio.hrms.entities.concretes.CandidateLanguage;
 import kodlamaio.hrms.entities.concretes.CandidateSchool;
 import kodlamaio.hrms.entities.concretes.CandidateTalent;
+import kodlamaio.hrms.entities.dtos.CandidateCvDto;
 
 @Service
 public class CandidateCvManager implements CandidateCvService {
@@ -33,43 +36,50 @@ public class CandidateCvManager implements CandidateCvService {
 	private CandidateLanguageDao candidateLanguageDao;
 	private CandidateJobExperienceDao candidateJobExperienceDao;
 	private ImageService imageService;
+	private DtoConverterService dtoConverterService;
 
 	@Autowired
 	public CandidateCvManager(CandidateCvDao candidateCvDao, CandidateSchoolDao candidateSchoolDao,
 			CandidateTalentDao candidateTalentDao, CandidateLanguageDao candidateLanguageDao,
-			CandidateJobExperienceDao candidateJobExperienceDao, ImageService imageService) {
-
+			CandidateJobExperienceDao candidateJobExperienceDao, ImageService imageService,
+			DtoConverterService dtoConverterService) {
 		this.candidateCvDao = candidateCvDao;
 		this.candidateSchoolDao = candidateSchoolDao;
 		this.candidateTalentDao = candidateTalentDao;
 		this.candidateLanguageDao = candidateLanguageDao;
 		this.candidateJobExperienceDao = candidateJobExperienceDao;
 		this.imageService = imageService;
-
+		this.dtoConverterService = dtoConverterService;
 	}
 
 	@Override
 	public DataResult<List<CandidateCv>> getAll() {
 
 		return new SuccessDataResult<List<CandidateCv>>(this.candidateCvDao.findAll(),
-				" -> İş Arayan Cv Bilgisi Sistemden Listelendi!");
+				" -> İş Arayanların Cv Bilgileri Sistemden Listelendi!");
 
 	}
 
 	@Override
-	public Result add(CandidateCv candidateCv) {
+	public Result add(CandidateCvDto candidateCv) {
 
-		CandidateCv temporaryRef = candidateCvDao.save(candidateCv);
+		candidateCv.setAvatarUrl("https://res.cloudinary.com/drtniio0r/image/upload/v1624707367/noperson_e8gskq.png");
+		CandidateCv temporaryRef = candidateCvDao
+				.save((CandidateCv) this.dtoConverterService.dtoClassConverter(candidateCv, CandidateCv.class));
 
-		setCvSchoolId(temporaryRef.getSchools(), temporaryRef);
+		return new SuccessResult(" -> İş Arayan Cv Bilgisi Sisteme Başarıyla Eklendi!");
 
-		setCvTalentId(temporaryRef.getTalents(), temporaryRef);
+	}
 
-		setCvLanguageId(temporaryRef.getLanguages(), temporaryRef);
+	@Override
+	public DataResult<CandidateCv> findById(int id) {
 
-		setCvJobExperienceId(temporaryRef.getJobExperience(), temporaryRef);
+		if (this.candidateCvDao.existsById(id)) {
+			return new SuccessDataResult<CandidateCv>(this.candidateCvDao.findById(id),
+					" -> İş Arayan Cv Bilgileri Sistemden Listelendi!");
+		}
 
-		return new SuccessResult(" -> İş Arayan Cv Bilgisi Eklendi!");
+		return new ErrorDataResult<>(" -> İş Arayan Cv Bilgileri Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
 
 	}
 
@@ -118,7 +128,6 @@ public class CandidateCvManager implements CandidateCvService {
 			candidateTalentDao.save(candidateTalent);
 
 		}
-
 	}
 
 	private void setCvLanguageId(List<CandidateLanguage> sc, CandidateCv cv) {
@@ -130,7 +139,6 @@ public class CandidateCvManager implements CandidateCvService {
 			candidateLanguageDao.save(data);
 
 		}
-
 	}
 
 	private void setCvJobExperienceId(List<CandidateJobExperience> sc, CandidateCv cv) {
@@ -142,6 +150,18 @@ public class CandidateCvManager implements CandidateCvService {
 			candidateJobExperienceDao.save(data);
 
 		}
+	}
+
+	@Override
+	public Result updateCoverLetter(String text, int cvId) {
+
+		CandidateCv ref = this.candidateCvDao.getOne(cvId);
+
+		ref.setCoverLetter(text);
+
+		this.candidateCvDao.save(ref);
+
+		return new SuccessResult(" -> İşlem Başarılı!");
 
 	}
 

@@ -16,12 +16,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
+@Table(name = "favs")
 @Entity
-@Table(name = "candidates_talent")
-public class CandidateTalent {
+
+public class Favourites {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,13 +29,13 @@ public class CandidateTalent {
 	@Column(name = "id")
 	private int id;
 
-	@ManyToOne(targetEntity = CandidateCv.class)
-	@JoinColumn(name = "candidates_cv_id")
-	@JsonIgnore
-	private CandidateCv candidateCv;
+	@ManyToOne
+	@JoinColumn(name = "job_advertisement_id")
+	private JobAdvertisement jobAdvertisement;
 
 	@ManyToOne
-	@JoinColumn(name = "talents_id")
-	private Talent talent;
+	@JoinColumn(name = "candidate_id")
+	@JsonIgnore
+	private Candidate candidate;
 
 }

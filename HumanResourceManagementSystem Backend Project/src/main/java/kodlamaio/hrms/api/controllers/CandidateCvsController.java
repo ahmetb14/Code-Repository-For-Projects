@@ -16,7 +16,10 @@ import org.springframework.web.multipart.MultipartFile;
 import kodlamaio.hrms.business.abstracts.CandidateCvService;
 import kodlamaio.hrms.core.utilites.results.DataResult;
 import kodlamaio.hrms.core.utilites.results.Result;
+
 import kodlamaio.hrms.entities.concretes.CandidateCv;
+
+import kodlamaio.hrms.entities.dtos.CandidateCvDto;
 
 @RestController
 @RequestMapping("api/cv")
@@ -46,17 +49,32 @@ public class CandidateCvsController {
 
 	}
 
+	@GetMapping("/findbycvid")
+	public DataResult<CandidateCv> findByCvId(@RequestParam int id) {
+
+		return this.candidateCvService.findById(id);
+
+	}
+
 	@PostMapping("/add")
-	public Result add(@RequestBody CandidateCv candidateCv) {
+	public Result add(@RequestBody CandidateCvDto candidateCv) {
 
 		return this.candidateCvService.add(candidateCv);
 
 	}
 
 	@PostMapping("/addcvphoto")
-	public Result uploadCvPhoto(int candidateCvId, MultipartFile multipartFile) throws IOException {
+	public Result uploadCvPhoto(@RequestParam int candidateCvId, @RequestParam MultipartFile multipartFile)
+			throws IOException {
 
 		return this.candidateCvService.uploadCvPhoto(candidateCvId, multipartFile);
+
+	}
+
+	@PostMapping("/updateCoverLetter")
+	public Result updateCoverLetter(String text, int cvId) {
+
+		return this.candidateCvService.updateCoverLetter(text, cvId);
 
 	}
 

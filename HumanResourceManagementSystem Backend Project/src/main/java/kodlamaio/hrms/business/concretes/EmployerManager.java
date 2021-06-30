@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import kodlamaio.hrms.business.abstracts.EmailVerifyService;
 import kodlamaio.hrms.business.abstracts.EmployerService;
 import kodlamaio.hrms.business.abstracts.UserService;
+
 import kodlamaio.hrms.core.utilites.business.BusinessEngine;
 import kodlamaio.hrms.core.utilites.results.DataResult;
 import kodlamaio.hrms.core.utilites.results.ErrorDataResult;
@@ -17,6 +18,7 @@ import kodlamaio.hrms.core.utilites.results.Result;
 import kodlamaio.hrms.core.utilites.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilites.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.EmployerDao;
+
 import kodlamaio.hrms.entities.concretes.EmailVerify;
 import kodlamaio.hrms.entities.concretes.Employer;
 import kodlamaio.hrms.entities.concretes.User;
@@ -47,7 +49,7 @@ public class EmployerManager implements EmployerService {
 
 		if (!engine.isSuccess()) {
 
-			return new ErrorDataResult<Employer>(null, engine.getMessage());
+			return new ErrorDataResult(null, engine.getMessage());
 
 		}
 
@@ -56,7 +58,7 @@ public class EmployerManager implements EmployerService {
 		this.emailVerificationService.generateCode(new EmailVerify(), savedUser.getId());
 
 		return new SuccessDataResult<Employer>(this.employerDao.save(employer),
-				" -> İş Veren Hesabı Eklendi! Doğrulama Kodu Gönderildi: " + employer.getId());
+				" -> İş Veren Hesabı Başarıyla Sisteme Eklendi Doğrulama Kodu Gönderildi ID: " + employer.getId());
 
 	}
 
@@ -64,7 +66,7 @@ public class EmployerManager implements EmployerService {
 
 		if (employer.getCompanyName().isBlank() || employer.getCompanyName() == null) {
 
-			return new ErrorResult(" -> Şirket Adı Alanı Doldurulmak Zorundadır!");
+			return new ErrorResult(" -> Şirket Adı Alanını Doldurmak Zorunludur Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -76,7 +78,7 @@ public class EmployerManager implements EmployerService {
 
 		if (employer.getWebAdress().isBlank() || employer.getWebAdress() == null) {
 
-			return new ErrorResult("-> WebSite Adresi Alanı Doldurulmak Zorundadır!");
+			return new ErrorResult(" -> Web Site Adresi Doldurmak Zorunludur Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -94,11 +96,11 @@ public class EmployerManager implements EmployerService {
 
 		if (!matcher.matches()) {
 
-			return new ErrorResult(" -> Geçersiz Email Adresi Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Girilen Email Adresi Sistemde Zaten Kayıtlı Lütfen Tekrar Deneyiniz!");
 
 		} else if (!employer.getEmail().contains(employer.getWebAdress())) {
 
-			return new ErrorResult("-> Domain Adresi Alanı Girilmek Zorundadır!");
+			return new ErrorResult(" -> Domain Adresi Girmek Zorunludur Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -110,7 +112,7 @@ public class EmployerManager implements EmployerService {
 
 		if (employerDao.findAllByEmail(employer.getEmail()).stream().count() != 0) {
 
-			return new ErrorResult(" -> Email Adresi Sistemde Zaten Kayıtlı!");
+			return new ErrorResult(" -> Girilen Email Adresi Sistemde Zaten Kayıtlı Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -122,7 +124,7 @@ public class EmployerManager implements EmployerService {
 
 		if (employer.getPassword().isBlank() || employer.getPassword() == null) {
 
-			return new ErrorResult("-> Şifre Bilgisi Alanı Doldurulmak Zorundadır!");
+			return new ErrorResult(" -> Şifre Bilgisi Alanını Doldurmak Zorunludur Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -155,6 +157,20 @@ public class EmployerManager implements EmployerService {
 
 		return new SuccessDataResult<List<Employer>>(this.employerDao.findAll(),
 				" -> İş Verenler Sistemden Başarıyla Listelendi!");
+
+	}
+
+	@Override
+	public Employer findByEmployerId(int id) {
+
+		return this.employerDao.findById(id);
+
+	}
+
+	@Override
+	public Employer update(Employer employer) {
+
+		return this.employerDao.save(employer);
 
 	}
 

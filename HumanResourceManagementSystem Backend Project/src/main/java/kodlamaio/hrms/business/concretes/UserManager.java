@@ -31,7 +31,14 @@ public class UserManager implements UserService {
 	@Override
 	public User add(User user) {
 
-		return this.userDao.save(user);
+		return userDao.save(user);
+
+	}
+
+	@Override
+	public User findById(int id) {
+
+		return userDao.findById(id);
 
 	}
 

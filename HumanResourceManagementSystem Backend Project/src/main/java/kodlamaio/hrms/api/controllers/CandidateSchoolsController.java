@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.hrms.business.abstracts.CandidateSchoolService;
 import kodlamaio.hrms.core.utilites.results.DataResult;
+import kodlamaio.hrms.core.utilites.results.Result;
+
 import kodlamaio.hrms.entities.concretes.CandidateSchool;
+import kodlamaio.hrms.entities.dtos.CandidateSchoolDto;
 
 @RestController
 @RequestMapping("/api/candidateschools")
@@ -36,10 +39,24 @@ public class CandidateSchoolsController {
 
 	}
 
+	@GetMapping("/getbyid")
+	public DataResult<List<CandidateSchool>> getbyid(@RequestParam int id) {
+
+		return this.candidateSchoolService.getBySchoolId(id);
+
+	}
+
 	@PostMapping("/update")
-	public DataResult<CandidateSchool> update(@RequestBody CandidateSchool candidateSchool) {
+	public Result update(@RequestBody CandidateSchoolDto candidateSchool) {
 
 		return this.candidateSchoolService.updateSchool(candidateSchool);
+
+	}
+
+	@PostMapping("/add")
+	public Result add(@RequestBody CandidateSchoolDto school) {
+
+		return this.candidateSchoolService.add(school);
 
 	}
 

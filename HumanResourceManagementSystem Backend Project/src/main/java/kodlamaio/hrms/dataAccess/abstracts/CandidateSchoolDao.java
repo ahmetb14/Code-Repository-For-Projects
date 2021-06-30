@@ -11,9 +11,12 @@ public interface CandidateSchoolDao extends JpaRepository<CandidateSchool, Integ
 
 	List<CandidateSchool> findByCandidateCvId(int id);
 
+	@Query(value = "select * from candidates_cv_school where id =:id  ", nativeQuery = true)
 	CandidateSchool findById(int id);
 
 	@Query("From CandidateSchool c where candidates_cv_id =:id ORDER BY graduation_date, is_continue DESC ")
 	List<CandidateSchool> getSchoolsOrderByGraduationDateDesc(int id);
+
+	List<CandidateSchool> getById(int id);
 
 }

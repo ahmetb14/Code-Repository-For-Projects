@@ -1,11 +1,21 @@
 package kodlamaio.hrms.business.concretes;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.hrms.business.abstracts.JobAdvertisementService;
+import kodlamaio.hrms.business.specifications.JobAdvertisementSpecification;
 import kodlamaio.hrms.core.utilites.business.BusinessEngine;
 import kodlamaio.hrms.core.utilites.converters.DtoConverterService;
 import kodlamaio.hrms.core.utilites.results.DataResult;
@@ -17,6 +27,7 @@ import kodlamaio.hrms.core.utilites.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.CityDao;
 import kodlamaio.hrms.dataAccess.abstracts.EmployerDao;
 import kodlamaio.hrms.dataAccess.abstracts.JobAdvertisementDao;
+
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
 import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
@@ -27,6 +38,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	private EmployerDao employerDao;
 	private CityDao cityDao;
 	private DtoConverterService dtoConverterService;
+	private ModelMapper modelMapper;
 
 	@Autowired
 	public JobAdvertisementManager(JobAdvertisementDao jobAdvertisementDao, EmployerDao employerDao, CityDao cityDao,
@@ -37,14 +49,14 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		this.employerDao = employerDao;
 		this.cityDao = cityDao;
 		this.dtoConverterService = dtoConverterService;
+		this.modelMapper = new ModelMapper();
 
 	}
 
 	@Override
 	public DataResult<List<JobAdvertisement>> getAll() {
 
-		return new SuccessDataResult<List<JobAdvertisement>>(jobAdvertisementDao.findAll(),
-				" -> İş İlanları Sistemden Başarıyla Listelendi!");
+		return new SuccessDataResult<List<JobAdvertisement>>(jobAdvertisementDao.findAll(), " -> Data Listelendi!");
 
 	}
 
@@ -62,11 +74,41 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 			return new ErrorResult(engine.getMessage());
 
 		}
-
+		
 		this.jobAdvertisementDao.save(
 				(JobAdvertisement) dtoConverterService.dtoClassConverter(jobAdvertisement, JobAdvertisement.class));
 
-		return new SuccessResult(" -> İşlem Başarılı İş İlanı Sisteme Eklendi!");
+		return new SuccessResult(" -> İşlem Başarılı Eklendi!");
+
+	}
+
+	@Override
+	public DataResult<List<JobAdvertisement>> getFilter(JobAdvertisement postByFilterDto, int pageNumber,
+			int pageSize) {
+
+		Pageable pageable = PageRequest.of(pageNumber - 1, pageSize);
+
+		Specification<JobAdvertisement> spec1 = JobAdvertisementSpecification.jobAdsFilter(postByFilterDto);
+
+		Page<JobAdvertisement> result = this.jobAdvertisementDao.findAll(spec1, pageable);
+
+		List<JobAdvertisement> active = new ArrayList<>();
+
+		for (JobAdvertisement post : result) {
+
+			if (post.isActive() == true && post.isConfirmed() == true) {
+
+				active.add(post);
+
+			}
+		}
+
+		Type listType = new TypeToken<List<JobAdvertisement>>() {
+		}.getType();
+
+		List<JobAdvertisement> dto = modelMapper.map(active, listType);
+
+		return new SuccessDataResult<List<JobAdvertisement>>(dto);
 
 	}
 
@@ -74,7 +116,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> findAllByIsActive() {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findAllByIsActive(true),
-				" -> Aktif İş İlanları Sistemden Başarıyla Listelendi!");
+				" -> İşlem Başarılı!");
 
 	}
 
@@ -82,8 +124,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> findAllByIsActiveSorted() {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(
-				this.jobAdvertisementDao.findAllByIsActiveOrderByCreatedDateDesc(true),
-				" -> Aktif İş İlanları Sistemden Başarıyla Sıralandı!");
+				this.jobAdvertisementDao.findAllByIsActiveOrderByCreatedDateDesc(true), " -> İşlem Başarılı!");
 
 	}
 
@@ -92,13 +133,12 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (!this.employerDao.existsById(id)) {
 
-			return new ErrorDataResult(" -> İş Veren Hesabı Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
+			return new ErrorDataResult(" -> İş Veren Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
 
 		} else {
 
 			return new SuccessDataResult<List<JobAdvertisement>>(
-					this.jobAdvertisementDao.getEmployersActiveJobAdvertisement(id),
-					" -> İstenen Şirketin İş İlanları Listelendi!");
+					this.jobAdvertisementDao.getEmployersActiveJobAdvertisement(id), " -> İşlem Başarılı!");
 
 		}
 
@@ -109,7 +149,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (!this.jobAdvertisementDao.existsById(id)) {
 
-			return new ErrorDataResult(" -> İş Veren Hesabı Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
+			return new ErrorDataResult(" -> İş Veren Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -118,7 +158,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		ref.setActive(false);
 
 		return new SuccessDataResult<JobAdvertisement>(this.jobAdvertisementDao.save(ref),
-				" -> Seçilen İş İlanı Sistemde Pasif Olarak Ayarlandı!");
+				" -> İş İlanı Sistemde Pasif Olarak Ayarlandı!");
 
 	}
 
@@ -126,7 +166,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (!this.employerDao.existsById(jobAdvertisement.getEmployerId())) {
 
-			return new ErrorResult(" -> İş Veren Hesabı Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> İş Veren Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -138,7 +178,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (!this.cityDao.existsById(jobAdvertisement.getCityId())) {
 
-			return new ErrorResult(" -> İstenen Şehir Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> İstenen Şehir Bilgisi Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
 
 		}
 
@@ -162,7 +202,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getMinSalary() == null) {
 
-			return new ErrorResult(" -> Minimum Maaş Alanı Girilmek Zorundadır Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Minimum Maaş Girilmek Zorundadır!");
 
 		}
 
@@ -174,7 +214,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getMaxSalary() == null) {
 
-			return new ErrorResult(" -> Maksimum Maaş Alanı Girilmek Zorundadır Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Maksimum Maaş Girilmek Zorundadır!");
 
 		}
 
@@ -186,7 +226,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getMinSalary() == 0) {
 
-			return new ErrorResult(" -> Minimum Maaş Alanına Sıfır Değeri Verilemez Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Minimum Maaş Alanına Sıfır Değeri Verilemez!");
 
 		}
 
@@ -198,7 +238,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getMaxSalary() == 0) {
 
-			return new ErrorResult(" -> Maksimum Maaş Alanına Sıfır Değeri Verilemez Lütfen Tekrar Deneyiniz");
+			return new ErrorResult(" -> Maksimum Maaş Alanına Sıfır Değeri Verilemez!");
 
 		}
 
@@ -210,7 +250,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getMinSalary() >= jobAdvertisement.getMaxSalary()) {
 
-			return new ErrorResult(" -> Minimum Maaş İle Maksimum Maaş Alanıları Eşit Olamaz Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Minimum Maaş Değeri Maksimum Maaş Değerine Eşit Olamaz!");
 
 		}
 
@@ -222,7 +262,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getQuota() < 1) {
 
-			return new ErrorResult(" -> Açık Pozisyon Adedi Bir Değerinden Küçük Olamaz Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Açık Pozisyon Adedi Birden Küçük Olamaz!");
 
 		}
 
@@ -234,7 +274,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 		if (jobAdvertisement.getAppealExpirationDate() == null) {
 
-			return new ErrorResult(" -> Son Başvuru Tarihi Alanı Girilmek Zorundadır Lütfen Tekrar Deneyiniz!");
+			return new ErrorResult(" -> Son Başvuru Tarihi Girilmek Zorundadır!");
 
 		}
 
@@ -245,8 +285,8 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	@Override
 	public DataResult<List<JobAdvertisement>> getConfirmedJobAdvertisements() {
 
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getWaitingJobAdvertisements(),
-				" -> Onaylanmış İş İlanları Sistemden Listelendi!");
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getConfirmedJobAdvertisements(),
+				" -> Onaylanmış İş İlanları Sistemden Başarıyla Listelendi!");
 
 	}
 
@@ -254,7 +294,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> getWaitingJobAdvertisements() {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getWaitingJobAdvertisements(),
-				" -> Onaylanmış İş İlanları Sistemden Listelendi!");
+				" -> Onaylanmış İş İlanları Sistemden Başarıyla Listelendi!");
 
 	}
 
@@ -262,7 +302,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	public DataResult<List<JobAdvertisement>> getOneJobAds(int id) {
 
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getOneById(id),
-				" -> İş İlanı Detayları Sistemden Başarıyla Getirildi!");
+				" -> İş İlani Detayı Sistemden Başarıyla Geldi!");
 
 	}
 
@@ -277,11 +317,21 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 			jobAdvertisementDao.save(ref);
 
-			return new SuccessResult(" -> İş İlanı Hrms Kullanıcısı Tarafından Sistemden Başarıyla Onaylandı!");
+			return new SuccessResult(" -> Başarılı Şekilde İş İlanı Hrms Personeli Tarafından Onaylandı!");
 
 		}
 
-		return new ErrorResult(" -> İstenen İş İlanı Bulunamadı Lütfen Tekrar Deneyiniz!");
+		return new ErrorResult(" -> İş İlanı Sistemde Bulunamadı Lütfen Tekrar Deneyiniz!");
+
+	}
+
+	@Override
+	public DataResult<List<JobAdvertisement>> getConfirmedJobAdvertisementsWithPageable(int pageNo, int pageSize) {
+
+		Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
+
+		return new SuccessDataResult<List<JobAdvertisement>>(
+				this.jobAdvertisementDao.getConfirmedJobAdvertisements(pageable));
 
 	}
 

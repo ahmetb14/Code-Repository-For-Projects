@@ -8,8 +8,10 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -43,8 +45,8 @@ public class CandidateCv {
 	private boolean isActive;
 
 	@Column(name = "avatar_url")
-	private String avatarUrl;
-		
+	private String avatarUrl = "https://res.cloudinary.com/drtniio0r/image/upload/v1624707367/noperson_e8gskq.png";
+
 	@OneToMany(mappedBy = "candidateCv", fetch = FetchType.LAZY)
 	private List<CandidateSchool> schools;
 

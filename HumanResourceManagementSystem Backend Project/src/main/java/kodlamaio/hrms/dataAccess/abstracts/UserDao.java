@@ -8,4 +8,6 @@ public interface UserDao extends JpaRepository<User, Integer> {
 
 	boolean existsById(int id);
 
+	User findById(int id);
+
 }

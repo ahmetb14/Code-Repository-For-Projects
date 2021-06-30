@@ -40,4 +40,7 @@ public class CandidateLanguage {
 	@JoinColumn(name = "languages_id")
 	private Language language;
 
+	@Column(name = "level")
+	private int level;
+
 }
