@@ -55,7 +55,7 @@ export default function CreateJobAdvertisementDirectory() {
     },
     validationSchema: JobAdvertAddSchema,
     onSubmit: (values) => {
-      values.employerId = 8;
+      values.employerId = 11;
       jobAdvertisementService
         .add(values)
         .then((result) => console.log(result.data));

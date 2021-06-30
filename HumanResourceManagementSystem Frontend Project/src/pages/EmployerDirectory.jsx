@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, Table, Header, Icon, Button } from "semantic-ui-react";
+import { Table, Header, Icon } from "semantic-ui-react";
 import EmployerService from "../services/employerService";
 
 export default function EmployerDirectory() {
@@ -24,7 +24,7 @@ export default function EmployerDirectory() {
             <Table.HeaderCell>Şirket İsmi</Table.HeaderCell>
             <Table.HeaderCell>Web Site Adresi</Table.HeaderCell>
             <Table.HeaderCell>Email Adresi</Table.HeaderCell>
-            <Table.HeaderCell>Hızlı İletişim</Table.HeaderCell>
+            <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
@@ -33,13 +33,7 @@ export default function EmployerDirectory() {
               <Table.Cell>{employer.companyName}</Table.Cell>
               <Table.Cell>{employer.webAdress}</Table.Cell>
               <Table.Cell>{employer.email}</Table.Cell>
-              <Table.Cell>
-                <Menu.Item>
-                  <Button inverted color="brown">
-                    İletişim
-                  </Button>
-                </Menu.Item>
-              </Table.Cell>
+              <Table.Cell>{employer.phoneNumber}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
