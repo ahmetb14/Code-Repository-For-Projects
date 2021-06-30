@@ -104,6 +104,14 @@ CREATE TABLE public.employers
     PRIMARY KEY (id)
 );
 
+CREATE TABLE public.employers_update_status
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    employer_id integer,
+    json json,
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE public.favs
 (
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
@@ -253,6 +261,12 @@ ALTER TABLE public.candidates_talent
 ALTER TABLE public.employers
     ADD FOREIGN KEY (id)
     REFERENCES public.users (id)
+    NOT VALID;
+
+
+ALTER TABLE public.employers_update_status
+    ADD FOREIGN KEY (employer_id)
+    REFERENCES public.employers (id)
     NOT VALID;
 
 
