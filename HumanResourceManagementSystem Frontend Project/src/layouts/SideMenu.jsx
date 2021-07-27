@@ -15,7 +15,7 @@ export default function SideMenu() {
       >
         <Menu.Item name="bookmark">
           <Icon name="bookmark" />
-          Sayfa Kısımları
+          Sayfalar
         </Menu.Item>
         <Menu.Item name="world" as={Link} to={"/JobPositionDirectory"}>
           <Icon name="world" />

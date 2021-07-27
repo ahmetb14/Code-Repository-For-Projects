@@ -13,4 +13,5 @@ public interface CandidateCvDao extends JpaRepository<CandidateCv, Integer> {
 	boolean existsById(int id);
 
 	CandidateCv findById(int id);
+	
 }
