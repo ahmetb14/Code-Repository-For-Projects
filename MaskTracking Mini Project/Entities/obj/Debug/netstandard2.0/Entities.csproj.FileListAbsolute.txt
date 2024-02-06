@@ -1,9 +1,0 @@
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\bin\Debug\netstandard2.0\Entities.deps.json
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\bin\Debug\netstandard2.0\Entities.dll
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\bin\Debug\netstandard2.0\Entities.pdb
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\obj\Debug\netstandard2.0\Entities.dll
-C:\Users\ahmet\source\repos\MaskeTakip\Entities\obj\Debug\netstandard2.0\Entities.pdb
